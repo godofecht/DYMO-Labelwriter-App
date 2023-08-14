@@ -1,0 +1,227 @@
+#
+# Makefile for LPrint, a Label Printer Application
+#
+# Copyright © 2019-2022 by Michael R Sweet
+#
+# Licensed under Apache License v2.0.  See the file "LICENSE" for more
+# information.
+#
+
+# Be silent...
+.SILENT:
+
+
+# Version number...
+LPRINT_VERSION	=	@LPRINT_VERSION@
+
+
+# Languages we have localized messages for...
+LANGUAGES	=	de en es fr it
+
+
+# Programs and options...
+AR		=	@AR@
+ARFLAGS		=	@ARFLAGS@
+ASAN_OPTIONS	=	leak_check_at_exit=false
+CC		=	@CC@
+CFLAGS		=	-I.. @CFLAGS@ $(CPPFLAGS) $(OPTIM) $(WARNINGS)
+CPPFLAGS	=	@CPPFLAGS@
+CSFLAGS		=	-s "$${CODESIGN_IDENTITY:=-}" --timestamp @CSFLAGS@
+INSTALL		=	@INSTALL@
+LDFLAGS		=	@LDFLAGS@ $(OPTIM)
+LIBS		=	@LIBS@ -lm
+MKDIR		=	@MKDIR@ -p
+OPTIM		=	@OPTIM@
+RANLIB		=	@RANLIB@
+RM		=	@RM@ -f
+RMDIR		=	@RMDIR@
+SHELL		=	/bin/sh
+WARNINGS	=	@WARNINGS@
+
+
+# Directories...
+bindir		=	@bindir@
+datadir		=	@datadir@
+datarootdir	=	@datarootdir@
+exec_prefix	=	@exec_prefix@
+includedir	=	@includedir@
+infodir		=	@infodir@
+libdir		=	@libdir@
+libexecdir	=	@libexecdir@
+localstatedir	=	@localstatedir@
+mandir		=	@mandir@
+oldincludedir	=	@oldincludedir@
+prefix		=	@prefix@
+privateinclude	=	@privateinclude@
+sbindir		=	@sbindir@
+sharedstatedir	=	@sharedstatedir@
+srcdir		=	@srcdir@
+sysconfdir	=	@sysconfdir@
+top_srcdir	=	@top_srcdir@
+unitdir		=	@unitdir@
+
+BUILDROOT	=	$(DSTROOT)$(RPM_BUILD_ROOT)$(DESTDIR)
+
+
+# Build commands...
+.c.o:
+	echo Compiling $<...
+	$(CC) $(CFLAGS) -c -o $@ $<
+
+
+# Targets...
+MAN1		=	\
+			man/lprint-add.1 \
+			man/lprint-cancel.1 \
+			man/lprint-default.1 \
+			man/lprint-delete.1 \
+			man/lprint-devices.1 \
+			man/lprint-drivers.1 \
+			man/lprint-jobs.1 \
+			man/lprint-modify.1 \
+			man/lprint-printers.1 \
+			man/lprint-server.1 \
+			man/lprint-shutdown.1 \
+			man/lprint-status.1 \
+			man/lprint-submit.1 \
+			man/lprint.1
+MAN5		=	\
+			man/lprint.conf.5
+
+OBJS		=	\
+			lprint-common.o \
+			lprint-dymo.o \
+			lprint-epl2.o \
+			lprint-testpage.o \
+			lprint-zpl.o \
+			lprint.o
+TARGETS		=	\
+			lprint
+
+
+TESTOBJS	=	\
+			lprint-common.o \
+			testdither.o
+TESTTARGETS	=	\
+			testdither
+
+
+# Make everything...
+all:	$(TARGETS)
+
+
+# Clean everything...
+clean:
+	$(RM) $(TARGETS) $(OBJS) $(TESTTARGETS) $(TESTOBJS)
+
+
+# Clean everything and generated files
+distclean:	clean
+	$(RM) -r autom4te.cache
+	$(RM) config.h config.log config.status
+	$(RM) Makefile
+
+
+# Install everything...
+install:	all
+	echo "Installing lprint to $(BUILDROOT)$(bindir)..."
+	$(INSTALL) -d -m 755 $(BUILDROOT)$(bindir)
+	$(INSTALL) -c -m 755 lprint $(BUILDROOT)$(bindir)
+	echo "Installing man pages to $(BUILDROOT)$(mandir)..."
+	$(INSTALL) -d -m 755 $(BUILDROOT)$(mandir)/man1
+	for file in $(MAN1); do \
+	    $(INSTALL) -c -m 644 $$file $(BUILDROOT)$(mandir)/man1; \
+	done
+	$(INSTALL) -d -m 755 $(BUILDROOT)$(mandir)/man5
+	for file in $(MAN5); do \
+	    $(INSTALL) -c -m 644 $$file $(BUILDROOT)$(mandir)/man5; \
+	done
+	if test `uname` = Darwin; then \
+	    echo "Installing launchd service to $(BUILDROOT)/Library/LaunchDaemons..."; \
+	    $(INSTALL) -d -m 755 $(BUILDROOT)/Library/LaunchDaemons; \
+	    $(INSTALL) -c -m 644 org.msweet.lprint.plist $(BUILDROOT)/Library/LaunchDaemons; \
+	elif test "x$(unitdir)" != x; then \
+	    echo "Installing systemd service to $(BUILDROOT)$(unitdir)..."; \
+	    $(INSTALL) -d -m 755 $(BUILDROOT)$(unitdir); \
+	    $(INSTALL) -c -m 644 lprint.service $(BUILDROOT)$(unitdir); \
+	fi
+
+
+# Test everything...
+test:	$(TARGETS) $(TESTTARGETS)
+
+
+# LPrint program...
+lprint:	$(OBJS)
+	echo Linking $@...
+	$(CC) $(LDFLAGS) -o $@ $(OBJS) $(LIBS)
+	if test `uname` = Darwin; then \
+	    echo "Code-signing $@..."; \
+	    codesign $(CSFLAGS) -i org.msweet.lprint $@; \
+	fi
+
+
+# Dither test program...
+testdither: $(TESTOBJS)
+	echo Linking $@...
+	$(CC) $(LDFLAGS) -o $@ $(TESTOBJS) $(LIBS)
+	if test `uname` = Darwin; then \
+	    echo "Code-signing $@..."; \
+	    codesign $(CSFLAGS) -i org.msweet.testdither $@; \
+	fi
+
+
+# Generate resource headers from the corresponding files in the resource
+# directory...
+resheaders:
+	for file in lprint lprint-large lprint-small; do \
+	    echo "Generating $$file-png.h from $$file.png..."; \
+	    pappl-makeresheader static-resources/$$file.png >static-resources/$$file-png.h; \
+	done
+	for lang in $(LANGUAGES); do \
+	    echo "Generating lprint-$$lang-strings.h from lprint-$$lang.strings..."; \
+	    pappl-makeresheader static-resources/lprint-$$lang.strings >static-resources/lprint-$$lang-strings.h; \
+	done
+
+
+# Dependencies...
+$(OBJS) $(TESTOBJS):	config.h lprint.h Makefile
+lprint.o:	\
+		lprint-dymo.h \
+		lprint-epl2.h \
+		lprint-zpl.h \
+		static-resources/lprint-png.h \
+		static-resources/lprint-large-png.h \
+		static-resources/lprint-small-png.h \
+		static-resources/lprint-de-strings.h \
+		static-resources/lprint-en-strings.h \
+		static-resources/lprint-es-strings.h \
+		static-resources/lprint-fr-strings.h \
+		static-resources/lprint-it-strings.h
+
+
+# Notarize the lprint executable and make the macOS package...
+#
+# Set the APPLEID, CODESIGN_IDENTITY, PKGSIGN_IDENTITY, and TEAMID environment
+# variables from the Apple developer pages.
+macos:
+	echo "Creating archive for notarization..."
+	rm -f lprint.zip
+	zip -v9 lprint.zip lprint
+	echo Notarizing application
+	xcrun notarytool submit lprint.zip \
+	    --apple-id "$${APPLEID}" \
+	    --keychain-profile "AC_$${TEAMID}" \
+	    --team-id "$${TEAMID}" \
+	    --wait
+	rm -f lprint.zip
+	echo "Creating the macOS package..."
+	rm -rf /private/tmp/lprint-$(LPRINT_VERSION)
+	make BUILDROOT="/private/tmp/lprint-$(LPRINT_VERSION)" install
+	pkgbuild --root /private/tmp/lprint-$(LPRINT_VERSION) \
+	    --identifier org.msweet.lprint \
+	    --version $(LPRINT_VERSION) \
+	    --scripts macos-scripts \
+	    --min-os-version 10.14 \
+	    --sign "$${PKGSIGN_IDENTITY}" --timestamp \
+	    lprint-$(LPRINT_VERSION)-macos.pkg

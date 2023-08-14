@@ -1,0 +1,11 @@
+*.o
+/autom4te.cache
+/config.h
+/config.log
+/config.status
+/lprint
+/lprint.service
+/Makefile
+/testdither
+/xcode/lprint.xcodeproj/xcshareddata
+xcuserdata

@@ -1,0 +1,38 @@
+.\"
+.\" lprint-status man page for LPrint, a Label Printer Utility
+.\"
+.\" Copyright © 2019-2021 by Michael R Sweet.
+.\"
+.\" Licensed under Apache License v2.0.  See the file "LICENSE" for more
+.\" information.
+.\"
+.TH lprint-status 1 "LPrint" "2021-12-21" "Michael R Sweet"
+.SH NAME
+lprint-status \- show the current status of a printer
+.SH SYNOPSIS
+.B lprint
+.B status
+[
+.B \-d
+.I PRINTER
+] [
+.B \-u
+.I PRINTER-URI
+]
+.SH DESCRIPTION
+This command shows the current status of a printer.
+If no printer is specified, the combined server state is shown.
+.SH OPTIONS
+The following options are recognized by
+.B lprint status:
+.TP 5
+\fB\-d \fIPRINTER\fR
+Specifies the name of a printer.
+.TP 5
+\fB\-u \fIPRINTER-URI\fR
+Specifies an "ipp:" or "ipps:" URI for a remote printer.
+.SH SEE ALSO
+.BR lprint (1),
+.BR lprint-default (1).
+.SH COPYRIGHT
+Copyright \[co] 2019-2021 by Michael R Sweet.
