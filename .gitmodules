@@ -1,0 +1,6 @@
+[submodule "lprint"]
+	path = lprint
+	url = git@github.com:michaelrsweet/lprint.git
+[submodule "pappl"]
+	path = pappl
+	url = git@github.com:michaelrsweet/pappl.git

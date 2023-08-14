@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<JUCERPROJECT id="CjtTwM" name="ProperBadger" projectType="guiapp" useAppConfig="0"
+              addUsingNamespaceToJuceHeader="0" jucerFormatVersion="1" cppLanguageStandard="latest">
+  <MAINGROUP id="BwgCNo" name="ProperBadger">
+    <GROUP id="{02B4787F-F486-5E2F-E42C-19F3F8EEFB67}" name="Source">
+      <FILE id="AWZ2yn" name="Main.cpp" compile="1" resource="0" file="Source/Main.cpp"/>
+      <FILE id="IuAtk1" name="MainComponent.h" compile="0" resource="0" file="Source/MainComponent.h"/>
+      <FILE id="LXxjOf" name="MainComponent.cpp" compile="1" resource="0"
+            file="Source/MainComponent.cpp"/>
+    </GROUP>
+    <GROUP id="{EA938F0C-C4EA-83AC-4632-095C5E7DAF19}" name="Screens">
+      <FILE id="o2H8ES" name="EditTagComponent.h" compile="0" resource="0"
+            file="Source/Screens/EditTagComponent.h"/>
+      <FILE id="KD00mI" name="GeneralLabelComponent.h" compile="0" resource="0"
+            file="Source/Screens/GeneralLabelComponent.h"/>
+      <FILE id="PPiHL8" name="LabelGenerator.h" compile="0" resource="0"
+            file="Source/Screens/LabelGenerator.h"/>
+      <GROUP id="{49CDED48-7FBF-1FC6-31FA-BC5FE8274601}" name="lprint">
+        <GROUP id="{A21811F5-F03D-0DF9-4F09-CB6FD0431F0A}" name="macos-scripts">
+          <FILE id="tYJUPx" name="postinstall" compile="0" resource="1" file="Source/Screens/lprint/macos-scripts/postinstall"/>
+        </GROUP>
+        <GROUP id="{FBF6DE64-5299-AD94-C30C-332C9EBDE7B2}" name="man">
+          <FILE id="V809Pr" name="lprint-add.1" compile="0" resource="1" file="Source/Screens/lprint/man/lprint-add.1"/>
+          <FILE id="KJAnWm" name="lprint-cancel.1" compile="0" resource="1" file="Source/Screens/lprint/man/lprint-cancel.1"/>
+          <FILE id="vMZkOB" name="lprint-default.1" compile="0" resource="1"
+                file="Source/Screens/lprint/man/lprint-default.1"/>
+          <FILE id="hsjoyz" name="lprint-delete.1" compile="0" resource="1" file="Source/Screens/lprint/man/lprint-delete.1"/>
+          <FILE id="hxweGU" name="lprint-devices.1" compile="0" resource="1"
+                file="Source/Screens/lprint/man/lprint-devices.1"/>
+          <FILE id="KfRJlq" name="lprint-drivers.1" compile="0" resource="1"
+                file="Source/Screens/lprint/man/lprint-drivers.1"/>
+          <FILE id="ZnvRcg" name="lprint-jobs.1" compile="0" resource="1" file="Source/Screens/lprint/man/lprint-jobs.1"/>
+          <FILE id="IhZ6Z7" name="lprint-modify.1" compile="0" resource="1" file="Source/Screens/lprint/man/lprint-modify.1"/>
+          <FILE id="KXgcKS" name="lprint-options.1" compile="0" resource="1"
+                file="Source/Screens/lprint/man/lprint-options.1"/>
+          <FILE id="MxU1nR" name="lprint-printers.1" compile="0" resource="1"
+                file="Source/Screens/lprint/man/lprint-printers.1"/>
+          <FILE id="Ti7M2b" name="lprint-server.1" compile="0" resource="1" file="Source/Screens/lprint/man/lprint-server.1"/>
+          <FILE id="B1hWb0" name="lprint-shutdown.1" compile="0" resource="1"
+                file="Source/Screens/lprint/man/lprint-shutdown.1"/>
+          <FILE id="JJ0T9S" name="lprint-status.1" compile="0" resource="1" file="Source/Screens/lprint/man/lprint-status.1"/>
+          <FILE id="IyT9QJ" name="lprint-submit.1" compile="0" resource="1" file="Source/Screens/lprint/man/lprint-submit.1"/>
+          <FILE id="q0gxfm" name="lprint.1" compile="0" resource="1" file="Source/Screens/lprint/man/lprint.1"/>
+          <FILE id="bRFlm0" name="lprint.conf.5" compile="0" resource="1" file="Source/Screens/lprint/man/lprint.conf.5"/>
+        </GROUP>
+        <GROUP id="{68B4827A-5AE2-EB74-314C-9BEC3D63E5D6}" name="snap">
+          <GROUP id="{F9CC40D5-8E18-7E6D-BEC9-30B5E8D754C4}" name="hooks">
+            <FILE id="pK8PU1" name="configure" compile="0" resource="1" file="Source/Screens/lprint/snap/hooks/configure"/>
+          </GROUP>
+          <GROUP id="{43E71A7A-A2D9-8DC1-DA95-7BAA21C7AC49}" name="scripts">
+            <FILE id="UvjGjC" name="lprint-server" compile="0" resource="1" file="Source/Screens/lprint/snap/scripts/lprint-server"/>
+          </GROUP>
+          <FILE id="YOPMEi" name="snapcraft.yaml" compile="0" resource="1" file="Source/Screens/lprint/snap/snapcraft.yaml"/>
+        </GROUP>
+        <GROUP id="{6288C5E3-50D5-5F11-6654-1B55492EBCCA}" name="static-resources">
+          <FILE id="DxZyas" name="lprint-de-strings.h" compile="0" resource="0"
+                file="Source/Screens/lprint/static-resources/lprint-de-strings.h"/>
+          <FILE id="XdoEbw" name="lprint-de.strings" compile="0" resource="1"
+                file="Source/Screens/lprint/static-resources/lprint-de.strings"/>
+          <FILE id="t3hh1u" name="lprint-en-strings.h" compile="0" resource="0"
+                file="Source/Screens/lprint/static-resources/lprint-en-strings.h"/>
+          <FILE id="aTrlWB" name="lprint-en.strings" compile="0" resource="1"
+                file="Source/Screens/lprint/static-resources/lprint-en.strings"/>
+          <FILE id="ZvJc6Z" name="lprint-es-strings.h" compile="0" resource="0"
+                file="Source/Screens/lprint/static-resources/lprint-es-strings.h"/>
+          <FILE id="NMXjVz" name="lprint-es.strings" compile="0" resource="1"
+                file="Source/Screens/lprint/static-resources/lprint-es.strings"/>
+          <FILE id="zt1vBF" name="lprint-fr-strings.h" compile="0" resource="0"
+                file="Source/Screens/lprint/static-resources/lprint-fr-strings.h"/>
+          <FILE id="njhbcI" name="lprint-fr.strings" compile="0" resource="1"
+                file="Source/Screens/lprint/static-resources/lprint-fr.strings"/>
+          <FILE id="Mvoz8q" name="lprint-it-strings.h" compile="0" resource="0"
+                file="Source/Screens/lprint/static-resources/lprint-it-strings.h"/>
+          <FILE id="J3jnxK" name="lprint-it.strings" compile="0" resource="1"
+                file="Source/Screens/lprint/static-resources/lprint-it.strings"/>
+          <FILE id="iJ3sUT" name="lprint-large-png.h" compile="0" resource="0"
+                file="Source/Screens/lprint/static-resources/lprint-large-png.h"/>
+          <FILE id="zSu70D" name="lprint-large.png" compile="0" resource="1"
+                file="Source/Screens/lprint/static-resources/lprint-large.png"/>
+          <FILE id="GwvZmP" name="lprint-png.h" compile="0" resource="0" file="Source/Screens/lprint/static-resources/lprint-png.h"/>
+          <FILE id="FYYYD1" name="lprint-small-png.h" compile="0" resource="0"
+                file="Source/Screens/lprint/static-resources/lprint-small-png.h"/>
+          <FILE id="lnRvVf" name="lprint-small.png" compile="0" resource="1"
+                file="Source/Screens/lprint/static-resources/lprint-small.png"/>
+          <FILE id="Nq7nqg" name="lprint.png" compile="0" resource="1" file="Source/Screens/lprint/static-resources/lprint.png"/>
+        </GROUP>
+        <GROUP id="{8D75F9FD-EC85-61FA-9826-C74DE009D9B5}" name="testsuite">
+          <FILE id="csnjuE" name="bad-label.pwg" compile="0" resource="1" file="Source/Screens/lprint/testsuite/bad-label.pwg"/>
+          <FILE id="T3nOoi" name="complex-label.pwg" compile="0" resource="1"
+                file="Source/Screens/lprint/testsuite/complex-label.pwg"/>
+          <FILE id="q8wKKs" name="sample-label.pwg" compile="0" resource="1"
+                file="Source/Screens/lprint/testsuite/sample-label.pwg"/>
+        </GROUP>
+        <GROUP id="{F4FF9610-4984-1E65-E2F3-158277D61F45}" name="xcode">
+          <GROUP id="{8E84C4CE-0421-1FBE-6C0D-842C35D7DC16}" name="lprint.xcodeproj">
+            <GROUP id="{0CDD0501-FAF5-7FDF-3346-D8AA39BB3983}" name="project.xcworkspace">
+              <GROUP id="{340AA171-0DD7-A8E6-179C-771CB52183C4}" name="xcshareddata">
+                <GROUP id="{DB814AFD-F1C1-6FF6-7384-35118FCBBBC6}" name="swiftpm">
+                  <GROUP id="{28D6AC69-D96B-7E01-D1CA-FCC3EF3B6F97}" name="configuration"/>
+                </GROUP>
+                <FILE id="j8KwOj" name="IDEWorkspaceChecks.plist" compile="0" resource="1"
+                      file="Source/Screens/lprint/xcode/lprint.xcodeproj/project.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist"/>
+              </GROUP>
+              <GROUP id="{BDF24974-2D78-05CC-7AE5-1CE7AAB763FD}" name="xcuserdata">
+                <GROUP id="{BA35DDE4-F5FE-37F8-0104-C22AA4ED6500}" name="abhishekshivakumar.xcuserdatad">
+                  <FILE id="W7pgj8" name="UserInterfaceState.xcuserstate" compile="0"
+                        resource="1" file="Source/Screens/lprint/xcode/lprint.xcodeproj/project.xcworkspace/xcuserdata/abhishekshivakumar.xcuserdatad/UserInterfaceState.xcuserstate"/>
+                </GROUP>
+              </GROUP>
+              <FILE id="loqshz" name="contents.xcworkspacedata" compile="0" resource="1"
+                    file="Source/Screens/lprint/xcode/lprint.xcodeproj/project.xcworkspace/contents.xcworkspacedata"/>
+            </GROUP>
+            <GROUP id="{390509D9-3260-10DD-A056-57D1F46A7194}" name="xcuserdata">
+              <GROUP id="{4BFEE2D6-E0F1-2690-3498-22821EF23146}" name="abhishekshivakumar.xcuserdatad">
+                <GROUP id="{050ABFB5-BD54-65E2-94B0-295839080D12}" name="xcschemes">
+                  <FILE id="YY7dQb" name="xcschememanagement.plist" compile="0" resource="1"
+                        file="Source/Screens/lprint/xcode/lprint.xcodeproj/xcuserdata/abhishekshivakumar.xcuserdatad/xcschemes/xcschememanagement.plist"/>
+                </GROUP>
+              </GROUP>
+            </GROUP>
+            <FILE id="dsHbr7" name="project.pbxproj" compile="0" resource="1" file="Source/Screens/lprint/xcode/lprint.xcodeproj/project.pbxproj"/>
+          </GROUP>
+          <FILE id="tOv6em" name="config.h" compile="0" resource="0" file="Source/Screens/lprint/xcode/config.h"/>
+        </GROUP>
+        <FILE id="d1uCZR" name="CHANGES.md" compile="0" resource="1" file="Source/Screens/lprint/CHANGES.md"/>
+        <FILE id="kQQpKi" name="config.guess" compile="0" resource="1" file="Source/Screens/lprint/config.guess"/>
+        <FILE id="lYGN0Z" name="config.h" compile="0" resource="0" file="Source/Screens/lprint/config.h"/>
+        <FILE id="wrYvPi" name="config.h.in" compile="0" resource="1" file="Source/Screens/lprint/config.h.in"/>
+        <FILE id="Npo8pz" name="config.log" compile="0" resource="1" file="Source/Screens/lprint/config.log"/>
+        <FILE id="fLSRf4" name="config.status" compile="0" resource="1" file="Source/Screens/lprint/config.status"/>
+        <FILE id="SbnU34" name="config.sub" compile="0" resource="1" file="Source/Screens/lprint/config.sub"/>
+        <FILE id="KME8ER" name="configure" compile="0" resource="1" file="Source/Screens/lprint/configure"/>
+        <FILE id="WOToea" name="configure.ac" compile="0" resource="1" file="Source/Screens/lprint/configure.ac"/>
+        <FILE id="ukvD60" name="CONTRIBUTING.md" compile="0" resource="1" file="Source/Screens/lprint/CONTRIBUTING.md"/>
+        <FILE id="Ocq4Yr" name="DOCUMENTATION.md" compile="0" resource="1"
+              file="Source/Screens/lprint/DOCUMENTATION.md"/>
+        <FILE id="xsWaPb" name="install-sh" compile="0" resource="1" file="Source/Screens/lprint/install-sh"/>
+        <FILE id="xPMU26" name="LICENSE" compile="0" resource="1" file="Source/Screens/lprint/LICENSE"/>
+        <FILE id="vh7Ljx" name="lprint" compile="0" resource="1" file="Source/Screens/lprint/lprint"/>
+        <FILE id="oAMSlr" name="lprint-common.c" compile="1" resource="0" file="Source/Screens/lprint/lprint-common.c"/>
+        <FILE id="KBxvQQ" name="lprint-common.o" compile="0" resource="1" file="Source/Screens/lprint/lprint-common.o"/>
+        <FILE id="lKEVdn" name="lprint-dymo.c" compile="1" resource="0" file="Source/Screens/lprint/lprint-dymo.c"/>
+        <FILE id="TXE6Lz" name="lprint-dymo.h" compile="0" resource="0" file="Source/Screens/lprint/lprint-dymo.h"
+              xcodeResource="0"/>
+        <FILE id="NhyvHO" name="lprint-dymo.o" compile="0" resource="1" file="Source/Screens/lprint/lprint-dymo.o"/>
+        <FILE id="Imquj9" name="lprint-epl2.c" compile="1" resource="0" file="Source/Screens/lprint/lprint-epl2.c"/>
+        <FILE id="keIm63" name="lprint-epl2.h" compile="0" resource="0" file="Source/Screens/lprint/lprint-epl2.h"/>
+        <FILE id="gKgn1K" name="lprint-epl2.o" compile="0" resource="1" file="Source/Screens/lprint/lprint-epl2.o"/>
+        <FILE id="hZAPoe" name="lprint-testpage.c" compile="0" resource="0"
+              file="Source/Screens/lprint/lprint-testpage.c"/>
+        <FILE id="c0D9Pw" name="lprint-testpage.o" compile="0" resource="1"
+              file="Source/Screens/lprint/lprint-testpage.o"/>
+        <FILE id="k0Tk3s" name="lprint-zpl.c" compile="1" resource="0" file="Source/Screens/lprint/lprint-zpl.c"/>
+        <FILE id="fTATKL" name="lprint-zpl.h" compile="0" resource="0" file="Source/Screens/lprint/lprint-zpl.h"/>
+        <FILE id="G5tFlJ" name="lprint-zpl.o" compile="0" resource="1" file="Source/Screens/lprint/lprint-zpl.o"/>
+        <FILE id="Lfrv6i" name="lprint.c" compile="0" resource="0" file="Source/Screens/lprint/lprint.c"/>
+        <FILE id="iCRMSi" name="lprint.h" compile="0" resource="0" file="Source/Screens/lprint/lprint.h"/>
+        <FILE id="uAnKD1" name="lprint.o" compile="0" resource="1" file="Source/Screens/lprint/lprint.o"/>
+        <FILE id="XV2sOd" name="lprint.service" compile="0" resource="1" file="Source/Screens/lprint/lprint.service"/>
+        <FILE id="nfG6az" name="lprint.service.in" compile="0" resource="1"
+              file="Source/Screens/lprint/lprint.service.in"/>
+        <FILE id="YNHJmq" name="lprint.spec" compile="0" resource="1" file="Source/Screens/lprint/lprint.spec"/>
+        <FILE id="jjQRil" name="testdither.c" compile="0" resource="0" file="Source/Screens/lprint/testdither.c"/>
+      </GROUP>
+      <FILE id="zOgY4I" name="LabelPreviewComponent.h" compile="0" resource="0"
+            file="Source/Screens/LabelPreviewComponent.h"/>
+      <FILE id="SYlSSj" name="NameBadgeComponent.h" compile="0" resource="0"
+            file="Source/Screens/NameBadgeComponent.h"/>
+      <FILE id="rqS778" name="StorageLabelComponent.h" compile="0" resource="0"
+            file="Source/Screens/StorageLabelComponent.h"/>
+      <FILE id="ipsGZw" name="TabManager.h" compile="0" resource="0" file="Source/Screens/TabManager.h"/>
+      <FILE id="rwaRM4" name="TextAggregatorComponent.h" compile="0" resource="0"
+            file="Source/Screens/TextAggregatorComponent.h"/>
+    </GROUP>
+  </MAINGROUP>
+  <JUCEOPTIONS JUCE_STRICT_REFCOUNTEDPOINTER="1"/>
+  <EXPORTFORMATS>
+    <XCODE_MAC targetFolder="Builds/MacOSX" extraDefs="_PAPPL_WIN32_PTHREAD_H_=0"
+               extraLinkerFlags="-lcups -lpappl.1 -lusb-1.0">
+      <CONFIGURATIONS>
+        <CONFIGURATION isDebug="1" name="Debug" targetName="ProperBadger" macOSDeploymentTarget="10.14"
+                       osxCompatibility="10.14 SDK" headerPath="/usr/local/include/;"
+                       libraryPath="/usr/local/lib;&#10;/opt/local/libexec/openssl3/lib/;&#10;/Users/abhishekshivakumar/Downloads/cups-2.3.6/cups;"/>
+        <CONFIGURATION isDebug="0" name="Release" targetName="ProperBadger"/>
+      </CONFIGURATIONS>
+      <MODULEPATHS>
+        <MODULEPATH id="juce_core" path="../../juce-dev/juce-7/JUCE/modules"/>
+        <MODULEPATH id="juce_data_structures" path="../../juce-dev/juce-7/JUCE/modules"/>
+        <MODULEPATH id="juce_events" path="../../juce-dev/juce-7/JUCE/modules"/>
+        <MODULEPATH id="juce_graphics" path="../../juce-dev/juce-7/JUCE/modules"/>
+        <MODULEPATH id="juce_gui_basics" path="../../juce-dev/juce-7/JUCE/modules"/>
+      </MODULEPATHS>
+    </XCODE_MAC>
+  </EXPORTFORMATS>
+  <MODULES>
+    <MODULE id="juce_core" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_data_structures" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_events" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_graphics" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_gui_basics" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+  </MODULES>
+</JUCERPROJECT>
