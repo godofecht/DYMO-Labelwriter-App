@@ -8,9 +8,6 @@
 
 namespace BinaryData
 {
-    extern const char*   postinstall;
-    const int            postinstallSize = 192;
-
     extern const char*   lprintadd_1;
     const int            lprintadd_1Size = 2602;
 
@@ -101,35 +98,14 @@ namespace BinaryData
     extern const char*   samplelabel_pwg;
     const int            samplelabel_pwgSize = 70142;
 
-    extern const char*   IDEWorkspaceChecks_plist;
-    const int            IDEWorkspaceChecks_plistSize = 238;
-
-    extern const char*   UserInterfaceState_xcuserstate;
-    const int            UserInterfaceState_xcuserstateSize = 48623;
-
-    extern const char*   contents_xcworkspacedata;
-    const int            contents_xcworkspacedataSize = 151;
-
-    extern const char*   xcschememanagement_plist;
-    const int            xcschememanagement_plistSize = 453;
-
-    extern const char*   project_pbxproj;
-    const int            project_pbxprojSize = 39909;
-
     extern const char*   CHANGES_md;
     const int            CHANGES_mdSize = 3582;
 
     extern const char*   config_guess;
     const int            config_guessSize = 49794;
 
-    extern const char*   config_h_in;
-    const int            config_h_inSize = 350;
-
     extern const char*   config_log;
-    const int            config_logSize = 8731;
-
-    extern const char*   config_status;
-    const int            config_statusSize = 27896;
+    const int            config_logSize = 8556;
 
     extern const char*   config_sub;
     const int            config_subSize = 35406;
@@ -152,38 +128,29 @@ namespace BinaryData
     extern const char*   LICENSE;
     const int            LICENSESize = 11357;
 
-    extern const char*   lprint;
-    const int            lprintSize = 327440;
-
-    extern const char*   lprintcommon_o;
-    const int            lprintcommon_oSize = 67248;
-
-    extern const char*   lprintdymo_o;
-    const int            lprintdymo_oSize = 102496;
-
-    extern const char*   lprintepl2_o;
-    const int            lprintepl2_oSize = 79392;
-
-    extern const char*   lprinttestpage_o;
-    const int            lprinttestpage_oSize = 76312;
-
-    extern const char*   lprintzpl_o;
-    const int            lprintzpl_oSize = 137320;
-
-    extern const char*   lprint_o;
-    const int            lprint_oSize = 240680;
-
-    extern const char*   lprint_service;
-    const int            lprint_serviceSize = 254;
-
     extern const char*   lprint_service_in;
     const int            lprint_service_inSize = 248;
 
     extern const char*   lprint_spec;
     const int            lprint_specSize = 1670;
 
+    extern const char*   Makefile_in;
+    const int            Makefile_inSize = 5758;
+
+    extern const char*   makesrcdist;
+    const int            makesrcdistSize = 1745;
+
+    extern const char*   NOTICE;
+    const int            NOTICESize = 80;
+
+    extern const char*   org_msweet_lprint_plist;
+    const int            org_msweet_lprint_plistSize = 537;
+
+    extern const char*   README_md;
+    const int            README_mdSize = 2268;
+
     // Number of elements in the namedResourceList and originalFileNames arrays.
-    const int namedResourceListSize = 58;
+    const int namedResourceListSize = 47;
 
     // Points to the start of a list of resource names.
     extern const char* namedResourceList[];

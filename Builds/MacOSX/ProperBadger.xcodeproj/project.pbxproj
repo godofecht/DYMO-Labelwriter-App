@@ -8,135 +8,122 @@
 
 /* Begin PBXBuildFile section */
 		04F80D3AA1C879C702B853FF /* Foundation.framework */ = {isa = PBXBuildFile; fileRef = A64DE62DC2F7CD254D6A4D5B; };
+		08190684A50100FCC293C5C8 /* lprint-common.c */ = {isa = PBXBuildFile; fileRef = 7995C1B6458961B32A23D607; };
 		085022B03B9A72C8060F6B8D /* Main.cpp */ = {isa = PBXBuildFile; fileRef = 818187575CA5FF98F145094F; };
 		0BF2C72E697601BDFED89659 /* include_juce_gui_basics.mm */ = {isa = PBXBuildFile; fileRef = A74EC4446C131CE876CFC801; };
+		0FB69A8CE231E66958E0E178 /* lprint-testpage.c */ = {isa = PBXBuildFile; fileRef = E86C7632F41B6EF4B509111A; };
+		24D54E2FBFFA72B3C3A2D890 /* lprint-zpl.c */ = {isa = PBXBuildFile; fileRef = 2323E9DAFE6E7D1FD82EC4A2; };
 		2B7A7653E48B161403E33123 /* QuartzCore.framework */ = {isa = PBXBuildFile; fileRef = B1BC40ABDFD5AE10DBE59310; };
 		43CF87721AB5802BBB9416BE /* include_juce_core.mm */ = {isa = PBXBuildFile; fileRef = FE8CC2DC26C418888E7BFE33; };
 		492E1A62BF58F88B52FCDE48 /* MainComponent.cpp */ = {isa = PBXBuildFile; fileRef = F2C8AF393E3A5CA3B75E4384; };
 		4FCD59D4F5B39B3164348DA2 /* BinaryData.cpp */ = {isa = PBXBuildFile; fileRef = CD28A69037335100A9A20BD6; };
-		65165E8CBC0EDAD0DE583FD4 /* lprint-dymo.c */ = {isa = PBXBuildFile; fileRef = F820400426ABF3B874805CE5; };
-		691188F4C63AFBA49A487FF3 /* lprint-epl2.c */ = {isa = PBXBuildFile; fileRef = DD4F3BFED11E37933D387294; };
-		70787AC2E345E83BAC568520 /* lprint-common.c */ = {isa = PBXBuildFile; fileRef = A5A12C022C56B156E8038050; };
 		892F1D4E091093798F2E04C7 /* include_juce_events.mm */ = {isa = PBXBuildFile; fileRef = F613261CC8228E26B3A5790D; };
-		AB7604BC1DB151EE7751BEB1 /* lprint-zpl.c */ = {isa = PBXBuildFile; fileRef = 2DC1C3E2601EF90D9908A37C; };
+		A214153DCB69BE1A171DE12A /* lprint-dymo.c */ = {isa = PBXBuildFile; fileRef = D0517551C9B3898263B29507; };
 		C7310946FA741C44939C1389 /* Cocoa.framework */ = {isa = PBXBuildFile; fileRef = F7A6BB517099895D58D25272; };
 		CBB4323542A0594DC07C4335 /* include_juce_graphics.mm */ = {isa = PBXBuildFile; fileRef = 31ADCF4550E285B0BBB1C102; };
 		E34AEE63A69746910F462C8E /* IOKit.framework */ = {isa = PBXBuildFile; fileRef = 3334584043580B79774BD4FA; };
 		E472F6296723EB051D113524 /* RecentFilesMenuTemplate.nib */ = {isa = PBXBuildFile; fileRef = BAEEFD153D6E77613A5AE2F9; };
 		E81CDBD29BDCA97DCFA45448 /* include_juce_data_structures.mm */ = {isa = PBXBuildFile; fileRef = C21E23A8E7A336F2ADA895CF; };
+		EACAEF26D653F2D2673506C0 /* lprint-epl2.c */ = {isa = PBXBuildFile; fileRef = 9EDB81F09452F1FE63D32576; };
 		FED50ED0ED53639130F353E0 /* App */ = {isa = PBXBuildFile; fileRef = 7934C719E39C1DDC795C2FF4; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		00A6D1E13FF49755B0D3FC0A /* xcschememanagement.plist */ /* xcschememanagement.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = xcschememanagement.plist; path = ../../Source/Screens/lprint/xcode/lprint.xcodeproj/xcuserdata/abhishekshivakumar.xcuserdatad/xcschemes/xcschememanagement.plist; sourceTree = SOURCE_ROOT; };
-		05650D6FE81A5E910CE73893 /* lprint-jobs.1 */ /* lprint-jobs.1 */ = {isa = PBXFileReference; lastKnownFileType = file.1; name = "lprint-jobs.1"; path = "../../Source/Screens/lprint/man/lprint-jobs.1"; sourceTree = SOURCE_ROOT; };
-		0EE976AC16890C1BAC2E36FA /* config.log */ /* config.log */ = {isa = PBXFileReference; lastKnownFileType = file.log; name = config.log; path = ../../Source/Screens/lprint/config.log; sourceTree = SOURCE_ROOT; };
+		00345B38D53788F341548E03 /* lprint-es.strings */ /* lprint-es.strings */ = {isa = PBXFileReference; lastKnownFileType = file.strings; name = "lprint-es.strings"; path = "../../lprint/static-resources/lprint-es.strings"; sourceTree = SOURCE_ROOT; };
+		020374ACC18CD910E5D4F231 /* lprint-add.1 */ /* lprint-add.1 */ = {isa = PBXFileReference; lastKnownFileType = file.1; name = "lprint-add.1"; path = "../../lprint/man/lprint-add.1"; sourceTree = SOURCE_ROOT; };
+		078F1F967EFE8C0C52D54C6F /* lprint-small.png */ /* lprint-small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "lprint-small.png"; path = "../../lprint/static-resources/lprint-small.png"; sourceTree = SOURCE_ROOT; };
+		0B05DD5ED86FDD3F9A2FDADA /* config.sub */ /* config.sub */ = {isa = PBXFileReference; lastKnownFileType = file.sub; name = config.sub; path = ../../lprint/config.sub; sourceTree = SOURCE_ROOT; };
+		0DCFB39F3B5FD7C32E1D24E5 /* lprint.png */ /* lprint.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = lprint.png; path = "../../lprint/static-resources/lprint.png"; sourceTree = SOURCE_ROOT; };
 		121095AE4C9437E7465FD1E0 /* juce_events */ /* juce_events */ = {isa = PBXFileReference; lastKnownFileType = folder; name = juce_events; path = "/Users/abhishekshivakumar/juce-dev/juce-7/JUCE/modules/juce_events"; sourceTree = "<absolute>"; };
-		15F563F84DB140E13497F3CA /* lprint.1 */ /* lprint.1 */ = {isa = PBXFileReference; lastKnownFileType = file.1; name = lprint.1; path = ../../Source/Screens/lprint/man/lprint.1; sourceTree = SOURCE_ROOT; };
-		167CAB01F0F3B3FAD3AF704D /* config.status */ /* config.status */ = {isa = PBXFileReference; lastKnownFileType = file.status; name = config.status; path = ../../Source/Screens/lprint/config.status; sourceTree = SOURCE_ROOT; };
-		1690AC814B59D31C1C2CDB27 /* lprint-en-strings.h */ /* lprint-en-strings.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "lprint-en-strings.h"; path = "../../Source/Screens/lprint/static-resources/lprint-en-strings.h"; sourceTree = SOURCE_ROOT; };
-		17DA7C176AD3CEECF3F897F9 /* lprint.h */ /* lprint.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = lprint.h; path = ../../Source/Screens/lprint/lprint.h; sourceTree = SOURCE_ROOT; };
-		18C7372DCF85DEF09A71D20E /* lprint-it-strings.h */ /* lprint-it-strings.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "lprint-it-strings.h"; path = "../../Source/Screens/lprint/static-resources/lprint-it-strings.h"; sourceTree = SOURCE_ROOT; };
-		1B200D8CFE0F1FF55D6CB344 /* LICENSE */ /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = file; name = LICENSE; path = ../../Source/Screens/lprint/LICENSE; sourceTree = SOURCE_ROOT; };
-		25BD54C259F21AD586EFA688 /* contents.xcworkspacedata */ /* contents.xcworkspacedata */ = {isa = PBXFileReference; lastKnownFileType = file.xcworkspacedata; name = contents.xcworkspacedata; path = ../../Source/Screens/lprint/xcode/lprint.xcodeproj/project.xcworkspace/contents.xcworkspacedata; sourceTree = SOURCE_ROOT; };
-		26937FA057D8FA869E554AE2 /* bad-label.pwg */ /* bad-label.pwg */ = {isa = PBXFileReference; lastKnownFileType = file.pwg; name = "bad-label.pwg"; path = "../../Source/Screens/lprint/testsuite/bad-label.pwg"; sourceTree = SOURCE_ROOT; };
-		26E3B9EF44B759D3FF115622 /* config.h */ /* config.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = config.h; path = ../../Source/Screens/lprint/config.h; sourceTree = SOURCE_ROOT; };
+		1B1F27E64F707D98E4DA2D77 /* lprint-large-png.h */ /* lprint-large-png.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "lprint-large-png.h"; path = "../../lprint/static-resources/lprint-large-png.h"; sourceTree = SOURCE_ROOT; };
+		1CA9559BBF2D10C601555832 /* bad-label.pwg */ /* bad-label.pwg */ = {isa = PBXFileReference; lastKnownFileType = file.pwg; name = "bad-label.pwg"; path = "../../lprint/testsuite/bad-label.pwg"; sourceTree = SOURCE_ROOT; };
+		21DF7AA4A4572A04ECCA5A53 /* config.h */ /* config.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = config.h; path = ../../lprint/config.h; sourceTree = SOURCE_ROOT; };
+		2323E9DAFE6E7D1FD82EC4A2 /* lprint-zpl.c */ /* lprint-zpl.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = "lprint-zpl.c"; path = "../../lprint/lprint-zpl.c"; sourceTree = SOURCE_ROOT; };
+		23618E5765FCEF8D229B6923 /* lprint-es-strings.h */ /* lprint-es-strings.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "lprint-es-strings.h"; path = "../../lprint/static-resources/lprint-es-strings.h"; sourceTree = SOURCE_ROOT; };
+		249980B696DF88D7EC47BF20 /* LICENSE */ /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = file; name = LICENSE; path = ../../lprint/LICENSE; sourceTree = SOURCE_ROOT; };
 		293F998CB916D2682ACA3623 /* juce_core */ /* juce_core */ = {isa = PBXFileReference; lastKnownFileType = folder; name = juce_core; path = "/Users/abhishekshivakumar/juce-dev/juce-7/JUCE/modules/juce_core"; sourceTree = "<absolute>"; };
-		2B9C103AEE923DD112D72925 /* configure */ /* configure */ = {isa = PBXFileReference; lastKnownFileType = file; name = configure; path = ../../Source/Screens/lprint/configure; sourceTree = SOURCE_ROOT; };
-		2DC1C3E2601EF90D9908A37C /* lprint-zpl.c */ /* lprint-zpl.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = "lprint-zpl.c"; path = "../../Source/Screens/lprint/lprint-zpl.c"; sourceTree = SOURCE_ROOT; };
-		2EAABFD2AE235A5AD839697D /* CONTRIBUTING.md */ /* CONTRIBUTING.md */ = {isa = PBXFileReference; lastKnownFileType = file.md; name = CONTRIBUTING.md; path = ../../Source/Screens/lprint/CONTRIBUTING.md; sourceTree = SOURCE_ROOT; };
 		31ADCF4550E285B0BBB1C102 /* include_juce_graphics.mm */ /* include_juce_graphics.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = include_juce_graphics.mm; path = ../../JuceLibraryCode/include_juce_graphics.mm; sourceTree = SOURCE_ROOT; };
+		3218A28299EDD9371F3F4148 /* lprint-server */ /* lprint-server */ = {isa = PBXFileReference; lastKnownFileType = file; name = "lprint-server"; path = "../../lprint/snap/scripts/lprint-server"; sourceTree = SOURCE_ROOT; };
 		3334584043580B79774BD4FA /* IOKit.framework */ /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
 		33EBBC5DE1A541BBDAD77C22 /* GeneralLabelComponent.h */ /* GeneralLabelComponent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = GeneralLabelComponent.h; path = ../../Source/Screens/GeneralLabelComponent.h; sourceTree = SOURCE_ROOT; };
-		363B1B8F144B0026D35C6074 /* lprint-status.1 */ /* lprint-status.1 */ = {isa = PBXFileReference; lastKnownFileType = file.1; name = "lprint-status.1"; path = "../../Source/Screens/lprint/man/lprint-status.1"; sourceTree = SOURCE_ROOT; };
-		3762DFB4ED67CE77CAA13E6B /* lprint-dymo.o */ /* lprint-dymo.o */ = {isa = PBXFileReference; lastKnownFileType = file.o; name = "lprint-dymo.o"; path = "../../Source/Screens/lprint/lprint-dymo.o"; sourceTree = SOURCE_ROOT; };
 		39C9F87D85677A084570D530 /* TabManager.h */ /* TabManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TabManager.h; path = ../../Source/Screens/TabManager.h; sourceTree = SOURCE_ROOT; };
 		39CA434A1582CEBFA23AE89C /* MainComponent.h */ /* MainComponent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MainComponent.h; path = ../../Source/MainComponent.h; sourceTree = SOURCE_ROOT; };
-		3E121B155626C08A61769605 /* testdither.c */ /* testdither.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = testdither.c; path = ../../Source/Screens/lprint/testdither.c; sourceTree = SOURCE_ROOT; };
-		415448D944489A3657AF7D72 /* lprint-small-png.h */ /* lprint-small-png.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "lprint-small-png.h"; path = "../../Source/Screens/lprint/static-resources/lprint-small-png.h"; sourceTree = SOURCE_ROOT; };
-		44940E49A1EACE99E9D98FED /* lprint.spec */ /* lprint.spec */ = {isa = PBXFileReference; lastKnownFileType = file.spec; name = lprint.spec; path = ../../Source/Screens/lprint/lprint.spec; sourceTree = SOURCE_ROOT; };
-		4ED48439B4A04ADE2C35FFD2 /* lprint-fr-strings.h */ /* lprint-fr-strings.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "lprint-fr-strings.h"; path = "../../Source/Screens/lprint/static-resources/lprint-fr-strings.h"; sourceTree = SOURCE_ROOT; };
-		51670E4E8AAE7FC602EB7082 /* lprint-submit.1 */ /* lprint-submit.1 */ = {isa = PBXFileReference; lastKnownFileType = file.1; name = "lprint-submit.1"; path = "../../Source/Screens/lprint/man/lprint-submit.1"; sourceTree = SOURCE_ROOT; };
-		565E5642F217A74F40E99444 /* lprint-es-strings.h */ /* lprint-es-strings.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "lprint-es-strings.h"; path = "../../Source/Screens/lprint/static-resources/lprint-es-strings.h"; sourceTree = SOURCE_ROOT; };
+		3DC0CF51D50FD36F92FDC3AE /* lprint-dymo.h */ /* lprint-dymo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "lprint-dymo.h"; path = "../../lprint/lprint-dymo.h"; sourceTree = SOURCE_ROOT; };
+		42E8AFB9966279738BCA2F42 /* lprint.conf.5 */ /* lprint.conf.5 */ = {isa = PBXFileReference; lastKnownFileType = file.5; name = lprint.conf.5; path = ../../lprint/man/lprint.conf.5; sourceTree = SOURCE_ROOT; };
+		43F3B993DC395C441D5151D2 /* config.log */ /* config.log */ = {isa = PBXFileReference; lastKnownFileType = file.log; name = config.log; path = ../../lprint/config.log; sourceTree = SOURCE_ROOT; };
+		44E1C2654841D97654E8185D /* lprint-cancel.1 */ /* lprint-cancel.1 */ = {isa = PBXFileReference; lastKnownFileType = file.1; name = "lprint-cancel.1"; path = "../../lprint/man/lprint-cancel.1"; sourceTree = SOURCE_ROOT; };
+		4C20E1A41D1DB195750C7D8A /* lprint-large.png */ /* lprint-large.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "lprint-large.png"; path = "../../lprint/static-resources/lprint-large.png"; sourceTree = SOURCE_ROOT; };
+		4D6B8351BBEA29CFAC4C912C /* configure.ac */ /* configure.ac */ = {isa = PBXFileReference; lastKnownFileType = file.ac; name = configure.ac; path = ../../lprint/configure.ac; sourceTree = SOURCE_ROOT; };
+		4F945F708F4166FD84336451 /* lprint-printers.1 */ /* lprint-printers.1 */ = {isa = PBXFileReference; lastKnownFileType = file.1; name = "lprint-printers.1"; path = "../../lprint/man/lprint-printers.1"; sourceTree = SOURCE_ROOT; };
+		5206D6ECD7469D87A8B177BC /* lprint-fr.strings */ /* lprint-fr.strings */ = {isa = PBXFileReference; lastKnownFileType = file.strings; name = "lprint-fr.strings"; path = "../../lprint/static-resources/lprint-fr.strings"; sourceTree = SOURCE_ROOT; };
 		5988F3398C595B2BD52FF599 /* LabelPreviewComponent.h */ /* LabelPreviewComponent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = LabelPreviewComponent.h; path = ../../Source/Screens/LabelPreviewComponent.h; sourceTree = SOURCE_ROOT; };
-		59EA5EBAC9CBCB03B7FE5474 /* lprint-it.strings */ /* lprint-it.strings */ = {isa = PBXFileReference; lastKnownFileType = file.strings; name = "lprint-it.strings"; path = "../../Source/Screens/lprint/static-resources/lprint-it.strings"; sourceTree = SOURCE_ROOT; };
-		5CC94CE4FB66DB53098BFDEB /* config.guess */ /* config.guess */ = {isa = PBXFileReference; lastKnownFileType = file.guess; name = config.guess; path = ../../Source/Screens/lprint/config.guess; sourceTree = SOURCE_ROOT; };
-		5E564B6FB9D2D4BF3E93C42B /* lprint-large-png.h */ /* lprint-large-png.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "lprint-large-png.h"; path = "../../Source/Screens/lprint/static-resources/lprint-large-png.h"; sourceTree = SOURCE_ROOT; };
 		5FBC9921591323AEF37B6279 /* BinaryData.h */ /* BinaryData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = BinaryData.h; path = ../../JuceLibraryCode/BinaryData.h; sourceTree = SOURCE_ROOT; };
-		612D22C195225E27A5A6362D /* lprint-server */ /* lprint-server */ = {isa = PBXFileReference; lastKnownFileType = file; name = "lprint-server"; path = "../../Source/Screens/lprint/snap/scripts/lprint-server"; sourceTree = SOURCE_ROOT; };
-		660019D68E3BB27BF3A899CC /* lprint-testpage.o */ /* lprint-testpage.o */ = {isa = PBXFileReference; lastKnownFileType = file.o; name = "lprint-testpage.o"; path = "../../Source/Screens/lprint/lprint-testpage.o"; sourceTree = SOURCE_ROOT; };
 		688B325F1AB30E53B64C5313 /* NameBadgeComponent.h */ /* NameBadgeComponent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = NameBadgeComponent.h; path = ../../Source/Screens/NameBadgeComponent.h; sourceTree = SOURCE_ROOT; };
-		68AAE68CAF221A5F0A0FE629 /* lprint.conf.5 */ /* lprint.conf.5 */ = {isa = PBXFileReference; lastKnownFileType = file.5; name = lprint.conf.5; path = ../../Source/Screens/lprint/man/lprint.conf.5; sourceTree = SOURCE_ROOT; };
-		6A484FB4B1B2016BBEEF109D /* lprint-small.png */ /* lprint-small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "lprint-small.png"; path = "../../Source/Screens/lprint/static-resources/lprint-small.png"; sourceTree = SOURCE_ROOT; };
-		706AFDC154DB06D6066FE027 /* lprint-zpl.h */ /* lprint-zpl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "lprint-zpl.h"; path = "../../Source/Screens/lprint/lprint-zpl.h"; sourceTree = SOURCE_ROOT; };
-		70A03A7B0840B3352375DAD9 /* complex-label.pwg */ /* complex-label.pwg */ = {isa = PBXFileReference; lastKnownFileType = file.pwg; name = "complex-label.pwg"; path = "../../Source/Screens/lprint/testsuite/complex-label.pwg"; sourceTree = SOURCE_ROOT; };
-		70FDDA63BB2F4FFF13C04584 /* lprint-de-strings.h */ /* lprint-de-strings.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "lprint-de-strings.h"; path = "../../Source/Screens/lprint/static-resources/lprint-de-strings.h"; sourceTree = SOURCE_ROOT; };
-		720D44AD0EBB6CBDC91E0500 /* lprint.c */ /* lprint.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = lprint.c; path = ../../Source/Screens/lprint/lprint.c; sourceTree = SOURCE_ROOT; };
-		73E897847EC57CC5D009F492 /* lprint-shutdown.1 */ /* lprint-shutdown.1 */ = {isa = PBXFileReference; lastKnownFileType = file.1; name = "lprint-shutdown.1"; path = "../../Source/Screens/lprint/man/lprint-shutdown.1"; sourceTree = SOURCE_ROOT; };
-		764FE17DE880D0CEE2DC9765 /* lprint-testpage.c */ /* lprint-testpage.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = "lprint-testpage.c"; path = "../../Source/Screens/lprint/lprint-testpage.c"; sourceTree = SOURCE_ROOT; };
-		76AE3AC5F72BC12D717236B8 /* config.sub */ /* config.sub */ = {isa = PBXFileReference; lastKnownFileType = file.sub; name = config.sub; path = ../../Source/Screens/lprint/config.sub; sourceTree = SOURCE_ROOT; };
-		780D54DA5F6605DD8A8A2F8B /* lprint-de.strings */ /* lprint-de.strings */ = {isa = PBXFileReference; lastKnownFileType = file.strings; name = "lprint-de.strings"; path = "../../Source/Screens/lprint/static-resources/lprint-de.strings"; sourceTree = SOURCE_ROOT; };
+		69D03B59AB4CC1281FF04E48 /* DOCUMENTATION.md */ /* DOCUMENTATION.md */ = {isa = PBXFileReference; lastKnownFileType = file.md; name = DOCUMENTATION.md; path = ../../lprint/DOCUMENTATION.md; sourceTree = SOURCE_ROOT; };
+		6D52876B82CE1E014BCF7453 /* lprint.h */ /* lprint.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = lprint.h; path = ../../lprint/lprint.h; sourceTree = SOURCE_ROOT; };
+		6E218017EBCAD21B47903D9E /* makesrcdist */ /* makesrcdist */ = {isa = PBXFileReference; lastKnownFileType = file; name = makesrcdist; path = ../../lprint/makesrcdist; sourceTree = SOURCE_ROOT; };
+		7469877603D0AC66EEE7C561 /* install-sh */ /* install-sh */ = {isa = PBXFileReference; lastKnownFileType = file; name = "install-sh"; path = "../../lprint/install-sh"; sourceTree = SOURCE_ROOT; };
+		779B84E8F358883C708BE657 /* lprint-fr-strings.h */ /* lprint-fr-strings.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "lprint-fr-strings.h"; path = "../../lprint/static-resources/lprint-fr-strings.h"; sourceTree = SOURCE_ROOT; };
+		7841C4161E74603481E59BAE /* lprint-png.h */ /* lprint-png.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "lprint-png.h"; path = "../../lprint/static-resources/lprint-png.h"; sourceTree = SOURCE_ROOT; };
 		7934C719E39C1DDC795C2FF4 /* App */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProperBadger.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		7B8F7543457833A201C7AE5C /* UserInterfaceState.xcuserstate */ /* UserInterfaceState.xcuserstate */ = {isa = PBXFileReference; lastKnownFileType = file.xcuserstate; name = UserInterfaceState.xcuserstate; path = ../../Source/Screens/lprint/xcode/lprint.xcodeproj/project.xcworkspace/xcuserdata/abhishekshivakumar.xcuserdatad/UserInterfaceState.xcuserstate; sourceTree = SOURCE_ROOT; };
-		7CECE4B9B46309448AA05513 /* lprint.service */ /* lprint.service */ = {isa = PBXFileReference; lastKnownFileType = file.service; name = lprint.service; path = ../../Source/Screens/lprint/lprint.service; sourceTree = SOURCE_ROOT; };
+		7995C1B6458961B32A23D607 /* lprint-common.c */ /* lprint-common.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = "lprint-common.c"; path = "../../lprint/lprint-common.c"; sourceTree = SOURCE_ROOT; };
+		7D3D002078EF0985D027290B /* lprint-status.1 */ /* lprint-status.1 */ = {isa = PBXFileReference; lastKnownFileType = file.1; name = "lprint-status.1"; path = "../../lprint/man/lprint-status.1"; sourceTree = SOURCE_ROOT; };
+		8006CAEC3DB8EF0C942EBF8E /* sample-label.pwg */ /* sample-label.pwg */ = {isa = PBXFileReference; lastKnownFileType = file.pwg; name = "sample-label.pwg"; path = "../../lprint/testsuite/sample-label.pwg"; sourceTree = SOURCE_ROOT; };
 		818187575CA5FF98F145094F /* Main.cpp */ /* Main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Main.cpp; path = ../../Source/Main.cpp; sourceTree = SOURCE_ROOT; };
-		858B0C9019D59355947A0818 /* configure.ac */ /* configure.ac */ = {isa = PBXFileReference; lastKnownFileType = file.ac; name = configure.ac; path = ../../Source/Screens/lprint/configure.ac; sourceTree = SOURCE_ROOT; };
-		8A81F79329B7A327B7952581 /* lprint-cancel.1 */ /* lprint-cancel.1 */ = {isa = PBXFileReference; lastKnownFileType = file.1; name = "lprint-cancel.1"; path = "../../Source/Screens/lprint/man/lprint-cancel.1"; sourceTree = SOURCE_ROOT; };
-		8D8D13ED850D73273C54F5FB /* project.pbxproj */ /* project.pbxproj */ = {isa = PBXFileReference; lastKnownFileType = file.pbxproj; name = project.pbxproj; path = ../../Source/Screens/lprint/xcode/lprint.xcodeproj/project.pbxproj; sourceTree = SOURCE_ROOT; };
-		907D8C1C9F599FB6D3FFBE86 /* configure */ /* configure */ = {isa = PBXFileReference; lastKnownFileType = file; name = configure; path = ../../Source/Screens/lprint/snap/hooks/configure; sourceTree = SOURCE_ROOT; };
+		88CE5367EE45B6B66BE52365 /* lprint.1 */ /* lprint.1 */ = {isa = PBXFileReference; lastKnownFileType = file.1; name = lprint.1; path = ../../lprint/man/lprint.1; sourceTree = SOURCE_ROOT; };
+		89886D88A7A236DE053449BA /* lprint-delete.1 */ /* lprint-delete.1 */ = {isa = PBXFileReference; lastKnownFileType = file.1; name = "lprint-delete.1"; path = "../../lprint/man/lprint-delete.1"; sourceTree = SOURCE_ROOT; };
+		89BDB51A40A17469C409982A /* lprint-zpl.h */ /* lprint-zpl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "lprint-zpl.h"; path = "../../lprint/lprint-zpl.h"; sourceTree = SOURCE_ROOT; };
+		8BB50BD679036E4DE523EC0F /* lprint-de-strings.h */ /* lprint-de-strings.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "lprint-de-strings.h"; path = "../../lprint/static-resources/lprint-de-strings.h"; sourceTree = SOURCE_ROOT; };
+		8E5DD3BA9FD9F069797EAFB3 /* CHANGES.md */ /* CHANGES.md */ = {isa = PBXFileReference; lastKnownFileType = file.md; name = CHANGES.md; path = ../../lprint/CHANGES.md; sourceTree = SOURCE_ROOT; };
 		90AD90BF9C424EC2B9C54120 /* EditTagComponent.h */ /* EditTagComponent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = EditTagComponent.h; path = ../../Source/Screens/EditTagComponent.h; sourceTree = SOURCE_ROOT; };
-		90CB8B694582CB738195B5C9 /* lprint-devices.1 */ /* lprint-devices.1 */ = {isa = PBXFileReference; lastKnownFileType = file.1; name = "lprint-devices.1"; path = "../../Source/Screens/lprint/man/lprint-devices.1"; sourceTree = SOURCE_ROOT; };
-		962E4DE6D7813B88C7021733 /* lprint-add.1 */ /* lprint-add.1 */ = {isa = PBXFileReference; lastKnownFileType = file.1; name = "lprint-add.1"; path = "../../Source/Screens/lprint/man/lprint-add.1"; sourceTree = SOURCE_ROOT; };
-		9B1E3A60E0A5A0863A2F8D39 /* lprint.service.in */ /* lprint.service.in */ = {isa = PBXFileReference; lastKnownFileType = file.in; name = lprint.service.in; path = ../../Source/Screens/lprint/lprint.service.in; sourceTree = SOURCE_ROOT; };
-		9DDF0C8474FA90DA3EAEBCA1 /* sample-label.pwg */ /* sample-label.pwg */ = {isa = PBXFileReference; lastKnownFileType = file.pwg; name = "sample-label.pwg"; path = "../../Source/Screens/lprint/testsuite/sample-label.pwg"; sourceTree = SOURCE_ROOT; };
+		92C289ADB795AD7E6FE221D7 /* lprint-small-png.h */ /* lprint-small-png.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "lprint-small-png.h"; path = "../../lprint/static-resources/lprint-small-png.h"; sourceTree = SOURCE_ROOT; };
+		92D78D188A308564CE272258 /* lprint-en-strings.h */ /* lprint-en-strings.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "lprint-en-strings.h"; path = "../../lprint/static-resources/lprint-en-strings.h"; sourceTree = SOURCE_ROOT; };
+		9C00F02842EEA75FA1C9C8E2 /* Makefile.in */ /* Makefile.in */ = {isa = PBXFileReference; lastKnownFileType = file.in; name = Makefile.in; path = ../../lprint/Makefile.in; sourceTree = SOURCE_ROOT; };
+		9EDB81F09452F1FE63D32576 /* lprint-epl2.c */ /* lprint-epl2.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = "lprint-epl2.c"; path = "../../lprint/lprint-epl2.c"; sourceTree = SOURCE_ROOT; };
+		9F101D522D0DDFB7505B038A /* lprint-server.1 */ /* lprint-server.1 */ = {isa = PBXFileReference; lastKnownFileType = file.1; name = "lprint-server.1"; path = "../../lprint/man/lprint-server.1"; sourceTree = SOURCE_ROOT; };
+		A0E4929CA123C622C9F32C04 /* README.md */ /* README.md */ = {isa = PBXFileReference; lastKnownFileType = file.md; name = README.md; path = ../../lprint/README.md; sourceTree = SOURCE_ROOT; };
+		A33F82F963865BFF1F9C7ED4 /* org.msweet.lprint.plist */ /* org.msweet.lprint.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = org.msweet.lprint.plist; path = ../../lprint/org.msweet.lprint.plist; sourceTree = SOURCE_ROOT; };
 		A497D2B40ED22DAAABD6E2B5 /* StorageLabelComponent.h */ /* StorageLabelComponent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = StorageLabelComponent.h; path = ../../Source/Screens/StorageLabelComponent.h; sourceTree = SOURCE_ROOT; };
-		A5A12C022C56B156E8038050 /* lprint-common.c */ /* lprint-common.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = "lprint-common.c"; path = "../../Source/Screens/lprint/lprint-common.c"; sourceTree = SOURCE_ROOT; };
 		A64DE62DC2F7CD254D6A4D5B /* Foundation.framework */ /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		A66EF2CBE6D492C43E1A7D23 /* lprint-it.strings */ /* lprint-it.strings */ = {isa = PBXFileReference; lastKnownFileType = file.strings; name = "lprint-it.strings"; path = "../../lprint/static-resources/lprint-it.strings"; sourceTree = SOURCE_ROOT; };
 		A74EC4446C131CE876CFC801 /* include_juce_gui_basics.mm */ /* include_juce_gui_basics.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = include_juce_gui_basics.mm; path = ../../JuceLibraryCode/include_juce_gui_basics.mm; sourceTree = SOURCE_ROOT; };
-		AA29FB0EAF2425BA87CA016F /* DOCUMENTATION.md */ /* DOCUMENTATION.md */ = {isa = PBXFileReference; lastKnownFileType = file.md; name = DOCUMENTATION.md; path = ../../Source/Screens/lprint/DOCUMENTATION.md; sourceTree = SOURCE_ROOT; };
 		AB4CBB9EFDD192A294764A76 /* juce_gui_basics */ /* juce_gui_basics */ = {isa = PBXFileReference; lastKnownFileType = folder; name = juce_gui_basics; path = "/Users/abhishekshivakumar/juce-dev/juce-7/JUCE/modules/juce_gui_basics"; sourceTree = "<absolute>"; };
+		AD5D3C4F75E2BB3F95DEE72C /* lprint-modify.1 */ /* lprint-modify.1 */ = {isa = PBXFileReference; lastKnownFileType = file.1; name = "lprint-modify.1"; path = "../../lprint/man/lprint-modify.1"; sourceTree = SOURCE_ROOT; };
+		AD815986102DC3789AD8F589 /* lprint.service.in */ /* lprint.service.in */ = {isa = PBXFileReference; lastKnownFileType = file.in; name = lprint.service.in; path = ../../lprint/lprint.service.in; sourceTree = SOURCE_ROOT; };
+		ADB6B29210B2DEE6C976C546 /* lprint-options.1 */ /* lprint-options.1 */ = {isa = PBXFileReference; lastKnownFileType = file.1; name = "lprint-options.1"; path = "../../lprint/man/lprint-options.1"; sourceTree = SOURCE_ROOT; };
 		AE01AE32FA29621D5342F30F /* JuceHeader.h */ /* JuceHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = JuceHeader.h; path = ../../JuceLibraryCode/JuceHeader.h; sourceTree = SOURCE_ROOT; };
-		B0315D41657824668C755D4A /* config.h.in */ /* config.h.in */ = {isa = PBXFileReference; lastKnownFileType = file.in; name = config.h.in; path = ../../Source/Screens/lprint/config.h.in; sourceTree = SOURCE_ROOT; };
 		B1BC40ABDFD5AE10DBE59310 /* QuartzCore.framework */ /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		B6993C93037461EBE5404B4A /* lprint.o */ /* lprint.o */ = {isa = PBXFileReference; lastKnownFileType = file.o; name = lprint.o; path = ../../Source/Screens/lprint/lprint.o; sourceTree = SOURCE_ROOT; };
-		B7E323041E246A062080D19C /* lprint-large.png */ /* lprint-large.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "lprint-large.png"; path = "../../Source/Screens/lprint/static-resources/lprint-large.png"; sourceTree = SOURCE_ROOT; };
-		B7E9D817EE8A091626557158 /* lprint-fr.strings */ /* lprint-fr.strings */ = {isa = PBXFileReference; lastKnownFileType = file.strings; name = "lprint-fr.strings"; path = "../../Source/Screens/lprint/static-resources/lprint-fr.strings"; sourceTree = SOURCE_ROOT; };
-		B90F3AFAC2864A72C8F673D1 /* lprint-zpl.o */ /* lprint-zpl.o */ = {isa = PBXFileReference; lastKnownFileType = file.o; name = "lprint-zpl.o"; path = "../../Source/Screens/lprint/lprint-zpl.o"; sourceTree = SOURCE_ROOT; };
-		BA94ED4446C992D09667BBE8 /* lprint-modify.1 */ /* lprint-modify.1 */ = {isa = PBXFileReference; lastKnownFileType = file.1; name = "lprint-modify.1"; path = "../../Source/Screens/lprint/man/lprint-modify.1"; sourceTree = SOURCE_ROOT; };
+		B6A83139C49AC912442A6BC7 /* NOTICE */ /* NOTICE */ = {isa = PBXFileReference; lastKnownFileType = file; name = NOTICE; path = ../../lprint/NOTICE; sourceTree = SOURCE_ROOT; };
+		B7433DAD1902ACEBEDB37F9C /* config.guess */ /* config.guess */ = {isa = PBXFileReference; lastKnownFileType = file.guess; name = config.guess; path = ../../lprint/config.guess; sourceTree = SOURCE_ROOT; };
+		B91F059C18018EBC06EFF463 /* lprint-epl2.h */ /* lprint-epl2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "lprint-epl2.h"; path = "../../lprint/lprint-epl2.h"; sourceTree = SOURCE_ROOT; };
+		B961D0F78FC266AF1ABAAFBA /* configure */ /* configure */ = {isa = PBXFileReference; lastKnownFileType = file; name = configure; path = ../../lprint/configure; sourceTree = SOURCE_ROOT; };
 		BAEEFD153D6E77613A5AE2F9 /* RecentFilesMenuTemplate.nib */ /* RecentFilesMenuTemplate.nib */ = {isa = PBXFileReference; lastKnownFileType = file.nib; name = RecentFilesMenuTemplate.nib; path = RecentFilesMenuTemplate.nib; sourceTree = SOURCE_ROOT; };
-		BBA8D3C4CBEF3AEE2F8214AF /* lprint-delete.1 */ /* lprint-delete.1 */ = {isa = PBXFileReference; lastKnownFileType = file.1; name = "lprint-delete.1"; path = "../../Source/Screens/lprint/man/lprint-delete.1"; sourceTree = SOURCE_ROOT; };
 		BD51F35A9E149CB594F9E6D0 /* juce_graphics */ /* juce_graphics */ = {isa = PBXFileReference; lastKnownFileType = folder; name = juce_graphics; path = "/Users/abhishekshivakumar/juce-dev/juce-7/JUCE/modules/juce_graphics"; sourceTree = "<absolute>"; };
-		BEDCEA64AEB2D0BED75D450E /* lprint-dymo.h */ /* lprint-dymo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "lprint-dymo.h"; path = "../../Source/Screens/lprint/lprint-dymo.h"; sourceTree = SOURCE_ROOT; };
-		BFD8B57FBE04AB99A8AB7DA5 /* snapcraft.yaml */ /* snapcraft.yaml */ = {isa = PBXFileReference; lastKnownFileType = file.yaml; name = snapcraft.yaml; path = ../../Source/Screens/lprint/snap/snapcraft.yaml; sourceTree = SOURCE_ROOT; };
+		BD721143A01A63421B9DB4BC /* lprint-jobs.1 */ /* lprint-jobs.1 */ = {isa = PBXFileReference; lastKnownFileType = file.1; name = "lprint-jobs.1"; path = "../../lprint/man/lprint-jobs.1"; sourceTree = SOURCE_ROOT; };
 		BFDD0385A57A9D30B702C46B /* juce_data_structures */ /* juce_data_structures */ = {isa = PBXFileReference; lastKnownFileType = folder; name = juce_data_structures; path = "/Users/abhishekshivakumar/juce-dev/juce-7/JUCE/modules/juce_data_structures"; sourceTree = "<absolute>"; };
+		C09C009A8E58A8E934988AC7 /* lprint-devices.1 */ /* lprint-devices.1 */ = {isa = PBXFileReference; lastKnownFileType = file.1; name = "lprint-devices.1"; path = "../../lprint/man/lprint-devices.1"; sourceTree = SOURCE_ROOT; };
 		C21E23A8E7A336F2ADA895CF /* include_juce_data_structures.mm */ /* include_juce_data_structures.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = include_juce_data_structures.mm; path = ../../JuceLibraryCode/include_juce_data_structures.mm; sourceTree = SOURCE_ROOT; };
-		C286C53F5A6398DF8913AA65 /* lprint-server.1 */ /* lprint-server.1 */ = {isa = PBXFileReference; lastKnownFileType = file.1; name = "lprint-server.1"; path = "../../Source/Screens/lprint/man/lprint-server.1"; sourceTree = SOURCE_ROOT; };
-		C3DACC929987CD97B2D61645 /* config.h */ /* config.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = config.h; path = ../../Source/Screens/lprint/xcode/config.h; sourceTree = SOURCE_ROOT; };
+		C677BFEABA93B3A03DE3A8AE /* lprint-drivers.1 */ /* lprint-drivers.1 */ = {isa = PBXFileReference; lastKnownFileType = file.1; name = "lprint-drivers.1"; path = "../../lprint/man/lprint-drivers.1"; sourceTree = SOURCE_ROOT; };
+		C901F73D4FAC1057CE06F8CB /* configure */ /* configure */ = {isa = PBXFileReference; lastKnownFileType = file; name = configure; path = ../../lprint/snap/hooks/configure; sourceTree = SOURCE_ROOT; };
+		C9E3A80C9083FE2080ED056B /* CONTRIBUTING.md */ /* CONTRIBUTING.md */ = {isa = PBXFileReference; lastKnownFileType = file.md; name = CONTRIBUTING.md; path = ../../lprint/CONTRIBUTING.md; sourceTree = SOURCE_ROOT; };
 		CD28A69037335100A9A20BD6 /* BinaryData.cpp */ /* BinaryData.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = BinaryData.cpp; path = ../../JuceLibraryCode/BinaryData.cpp; sourceTree = SOURCE_ROOT; };
-		CDA602D7B8F10546DE677217 /* install-sh */ /* install-sh */ = {isa = PBXFileReference; lastKnownFileType = file; name = "install-sh"; path = "../../Source/Screens/lprint/install-sh"; sourceTree = SOURCE_ROOT; };
-		CF382C0FEEF8E2558008128C /* lprint-es.strings */ /* lprint-es.strings */ = {isa = PBXFileReference; lastKnownFileType = file.strings; name = "lprint-es.strings"; path = "../../Source/Screens/lprint/static-resources/lprint-es.strings"; sourceTree = SOURCE_ROOT; };
-		CFD1D243DED07B9BBF57D80B /* lprint-epl2.h */ /* lprint-epl2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "lprint-epl2.h"; path = "../../Source/Screens/lprint/lprint-epl2.h"; sourceTree = SOURCE_ROOT; };
-		D9C841BAE0BB95B5098A40E2 /* lprint-drivers.1 */ /* lprint-drivers.1 */ = {isa = PBXFileReference; lastKnownFileType = file.1; name = "lprint-drivers.1"; path = "../../Source/Screens/lprint/man/lprint-drivers.1"; sourceTree = SOURCE_ROOT; };
-		DD4F3BFED11E37933D387294 /* lprint-epl2.c */ /* lprint-epl2.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = "lprint-epl2.c"; path = "../../Source/Screens/lprint/lprint-epl2.c"; sourceTree = SOURCE_ROOT; };
-		DE5FEA741C6B4D39EBCDA2F7 /* lprint-common.o */ /* lprint-common.o */ = {isa = PBXFileReference; lastKnownFileType = file.o; name = "lprint-common.o"; path = "../../Source/Screens/lprint/lprint-common.o"; sourceTree = SOURCE_ROOT; };
-		E510A9EAEA79442CDCBE4DAC /* lprint.png */ /* lprint.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = lprint.png; path = "../../Source/Screens/lprint/static-resources/lprint.png"; sourceTree = SOURCE_ROOT; };
-		E652355E454D58A6FE087D35 /* lprint-printers.1 */ /* lprint-printers.1 */ = {isa = PBXFileReference; lastKnownFileType = file.1; name = "lprint-printers.1"; path = "../../Source/Screens/lprint/man/lprint-printers.1"; sourceTree = SOURCE_ROOT; };
-		E7375B91932800F0DD8FF383 /* lprint-png.h */ /* lprint-png.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "lprint-png.h"; path = "../../Source/Screens/lprint/static-resources/lprint-png.h"; sourceTree = SOURCE_ROOT; };
-		E7A08748D6F06C20844FFE27 /* postinstall */ /* postinstall */ = {isa = PBXFileReference; lastKnownFileType = file; name = postinstall; path = "../../Source/Screens/lprint/macos-scripts/postinstall"; sourceTree = SOURCE_ROOT; };
-		EC1D54F87009361C6218D925 /* lprint */ /* lprint */ = {isa = PBXFileReference; lastKnownFileType = file; name = lprint; path = ../../Source/Screens/lprint/lprint; sourceTree = SOURCE_ROOT; };
-		ED9B5D6633292B48DC266392 /* CHANGES.md */ /* CHANGES.md */ = {isa = PBXFileReference; lastKnownFileType = file.md; name = CHANGES.md; path = ../../Source/Screens/lprint/CHANGES.md; sourceTree = SOURCE_ROOT; };
+		D0517551C9B3898263B29507 /* lprint-dymo.c */ /* lprint-dymo.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = "lprint-dymo.c"; path = "../../lprint/lprint-dymo.c"; sourceTree = SOURCE_ROOT; };
+		E22DCD8C8FAD26C6B7FEB3F4 /* lprint-shutdown.1 */ /* lprint-shutdown.1 */ = {isa = PBXFileReference; lastKnownFileType = file.1; name = "lprint-shutdown.1"; path = "../../lprint/man/lprint-shutdown.1"; sourceTree = SOURCE_ROOT; };
+		E86C7632F41B6EF4B509111A /* lprint-testpage.c */ /* lprint-testpage.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = "lprint-testpage.c"; path = "../../lprint/lprint-testpage.c"; sourceTree = SOURCE_ROOT; };
+		EC20F9FD5E4542201AAA9A9D /* lprint-default.1 */ /* lprint-default.1 */ = {isa = PBXFileReference; lastKnownFileType = file.1; name = "lprint-default.1"; path = "../../lprint/man/lprint-default.1"; sourceTree = SOURCE_ROOT; };
 		EDFFF61C51CBE6188F992725 /* Info-App.plist */ /* Info-App.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Info-App.plist"; path = "Info-App.plist"; sourceTree = SOURCE_ROOT; };
+		EEB354407463AB8415B2A042 /* lprint-en.strings */ /* lprint-en.strings */ = {isa = PBXFileReference; lastKnownFileType = file.strings; name = "lprint-en.strings"; path = "../../lprint/static-resources/lprint-en.strings"; sourceTree = SOURCE_ROOT; };
+		EEE1A499607CA9DCB51A93C1 /* lprint-de.strings */ /* lprint-de.strings */ = {isa = PBXFileReference; lastKnownFileType = file.strings; name = "lprint-de.strings"; path = "../../lprint/static-resources/lprint-de.strings"; sourceTree = SOURCE_ROOT; };
+		F12E64ED4C62A07A4F3C025D /* lprint.spec */ /* lprint.spec */ = {isa = PBXFileReference; lastKnownFileType = file.spec; name = lprint.spec; path = ../../lprint/lprint.spec; sourceTree = SOURCE_ROOT; };
 		F2C8AF393E3A5CA3B75E4384 /* MainComponent.cpp */ /* MainComponent.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = MainComponent.cpp; path = ../../Source/MainComponent.cpp; sourceTree = SOURCE_ROOT; };
+		F3E49C23C643C349832353C7 /* lprint-submit.1 */ /* lprint-submit.1 */ = {isa = PBXFileReference; lastKnownFileType = file.1; name = "lprint-submit.1"; path = "../../lprint/man/lprint-submit.1"; sourceTree = SOURCE_ROOT; };
 		F58CE31FE3191C5C1F75BA73 /* TextAggregatorComponent.h */ /* TextAggregatorComponent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TextAggregatorComponent.h; path = ../../Source/Screens/TextAggregatorComponent.h; sourceTree = SOURCE_ROOT; };
 		F613261CC8228E26B3A5790D /* include_juce_events.mm */ /* include_juce_events.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = include_juce_events.mm; path = ../../JuceLibraryCode/include_juce_events.mm; sourceTree = SOURCE_ROOT; };
 		F66AD146CBDF9771543D07EE /* LabelGenerator.h */ /* LabelGenerator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = LabelGenerator.h; path = ../../Source/Screens/LabelGenerator.h; sourceTree = SOURCE_ROOT; };
-		F6B08D706787497AB64F6493 /* IDEWorkspaceChecks.plist */ /* IDEWorkspaceChecks.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = IDEWorkspaceChecks.plist; path = ../../Source/Screens/lprint/xcode/lprint.xcodeproj/project.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist; sourceTree = SOURCE_ROOT; };
 		F7A6BB517099895D58D25272 /* Cocoa.framework */ /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
-		F820400426ABF3B874805CE5 /* lprint-dymo.c */ /* lprint-dymo.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = "lprint-dymo.c"; path = "../../Source/Screens/lprint/lprint-dymo.c"; sourceTree = SOURCE_ROOT; };
-		F86607936E0EF254B221BB5D /* lprint-en.strings */ /* lprint-en.strings */ = {isa = PBXFileReference; lastKnownFileType = file.strings; name = "lprint-en.strings"; path = "../../Source/Screens/lprint/static-resources/lprint-en.strings"; sourceTree = SOURCE_ROOT; };
-		F9228DEEE39E172B63AEF7AB /* lprint-epl2.o */ /* lprint-epl2.o */ = {isa = PBXFileReference; lastKnownFileType = file.o; name = "lprint-epl2.o"; path = "../../Source/Screens/lprint/lprint-epl2.o"; sourceTree = SOURCE_ROOT; };
-		FA5CD8D159E5A3D17117391E /* lprint-default.1 */ /* lprint-default.1 */ = {isa = PBXFileReference; lastKnownFileType = file.1; name = "lprint-default.1"; path = "../../Source/Screens/lprint/man/lprint-default.1"; sourceTree = SOURCE_ROOT; };
-		FB6A95C4B5903FC32F069D6B /* lprint-options.1 */ /* lprint-options.1 */ = {isa = PBXFileReference; lastKnownFileType = file.1; name = "lprint-options.1"; path = "../../Source/Screens/lprint/man/lprint-options.1"; sourceTree = SOURCE_ROOT; };
+		F815EB613E9A819B92DFC517 /* lprint-it-strings.h */ /* lprint-it-strings.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "lprint-it-strings.h"; path = "../../lprint/static-resources/lprint-it-strings.h"; sourceTree = SOURCE_ROOT; };
+		F8776A8189CEAFEDB6FB381B /* snapcraft.yaml */ /* snapcraft.yaml */ = {isa = PBXFileReference; lastKnownFileType = file.yaml; name = snapcraft.yaml; path = ../../lprint/snap/snapcraft.yaml; sourceTree = SOURCE_ROOT; };
+		FA0AFDDAC48C2B31BC90E91C /* complex-label.pwg */ /* complex-label.pwg */ = {isa = PBXFileReference; lastKnownFileType = file.pwg; name = "complex-label.pwg"; path = "../../lprint/testsuite/complex-label.pwg"; sourceTree = SOURCE_ROOT; };
 		FE8CC2DC26C418888E7BFE33 /* include_juce_core.mm */ /* include_juce_core.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = include_juce_core.mm; path = ../../JuceLibraryCode/include_juce_core.mm; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -155,12 +142,12 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0030CC0B6435B092F128D9E7 /* snap */ = {
+		08D7A151859027AAB72A2362 /* snap */ = {
 			isa = PBXGroup;
 			children = (
-				BEB8057BA2F2C99988AB5340,
-				7BC169704A329FBB7F71ACEB,
-				BFD8B57FBE04AB99A8AB7DA5,
+				640E7A3161A5505081530E94,
+				741BF0EA1CC990DB310E4866,
+				F8776A8189CEAFEDB6FB381B,
 			);
 			name = snap;
 			sourceTree = "<group>";
@@ -175,47 +162,6 @@
 				AB4CBB9EFDD192A294764A76,
 			);
 			name = "JUCE Modules";
-			sourceTree = "<group>";
-		};
-		2909D1E4ABFA12B1CFBFF4D9 /* project.xcworkspace */ = {
-			isa = PBXGroup;
-			children = (
-				40D7C945F0F4D41931C8A6E0,
-				FEACCCD97117813593F7CE8D,
-				25BD54C259F21AD586EFA688,
-			);
-			name = project.xcworkspace;
-			sourceTree = "<group>";
-		};
-		337CAA7A129761382A6D8F0D /* static-resources */ = {
-			isa = PBXGroup;
-			children = (
-				70FDDA63BB2F4FFF13C04584,
-				780D54DA5F6605DD8A8A2F8B,
-				1690AC814B59D31C1C2CDB27,
-				F86607936E0EF254B221BB5D,
-				565E5642F217A74F40E99444,
-				CF382C0FEEF8E2558008128C,
-				4ED48439B4A04ADE2C35FFD2,
-				B7E9D817EE8A091626557158,
-				18C7372DCF85DEF09A71D20E,
-				59EA5EBAC9CBCB03B7FE5474,
-				5E564B6FB9D2D4BF3E93C42B,
-				B7E323041E246A062080D19C,
-				E7375B91932800F0DD8FF383,
-				415448D944489A3657AF7D72,
-				6A484FB4B1B2016BBEEF109D,
-				E510A9EAEA79442CDCBE4DAC,
-			);
-			name = "static-resources";
-			sourceTree = "<group>";
-		};
-		40D7C945F0F4D41931C8A6E0 /* xcshareddata */ = {
-			isa = PBXGroup;
-			children = (
-				F6B08D706787497AB64F6493,
-			);
-			name = xcshareddata;
 			sourceTree = "<group>";
 		};
 		534B803AC52469C2DFF62E64 /* Products */ = {
@@ -239,27 +185,12 @@
 			name = Source;
 			sourceTree = "<group>";
 		};
-		5DC59CE588ADB9DB40D4316C /* man */ = {
+		640E7A3161A5505081530E94 /* hooks */ = {
 			isa = PBXGroup;
 			children = (
-				962E4DE6D7813B88C7021733,
-				8A81F79329B7A327B7952581,
-				FA5CD8D159E5A3D17117391E,
-				BBA8D3C4CBEF3AEE2F8214AF,
-				90CB8B694582CB738195B5C9,
-				D9C841BAE0BB95B5098A40E2,
-				05650D6FE81A5E910CE73893,
-				BA94ED4446C992D09667BBE8,
-				FB6A95C4B5903FC32F069D6B,
-				E652355E454D58A6FE087D35,
-				C286C53F5A6398DF8913AA65,
-				73E897847EC57CC5D009F492,
-				363B1B8F144B0026D35C6074,
-				51670E4E8AAE7FC602EB7082,
-				15F563F84DB140E13497F3CA,
-				68AAE68CAF221A5F0A0FE629,
+				C901F73D4FAC1057CE06F8CB,
 			);
-			name = man;
+			name = hooks;
 			sourceTree = "<group>";
 		};
 		704745EDE952B806127F625D /* Screens */ = {
@@ -268,7 +199,6 @@
 				90AD90BF9C424EC2B9C54120,
 				33EBBC5DE1A541BBDAD77C22,
 				F66AD146CBDF9771543D07EE,
-				9A45B54E3331B5C1981D7C0A,
 				5988F3398C595B2BD52FF599,
 				688B325F1AB30E53B64C5313,
 				A497D2B40ED22DAAABD6E2B5,
@@ -278,45 +208,60 @@
 			name = Screens;
 			sourceTree = "<group>";
 		};
-		7442A2917E0F28D944D13B1B /* macos-scripts */ = {
+		741BF0EA1CC990DB310E4866 /* scripts */ = {
 			isa = PBXGroup;
 			children = (
-				E7A08748D6F06C20844FFE27,
+				3218A28299EDD9371F3F4148,
 			);
-			name = "macos-scripts";
+			name = scripts;
+			sourceTree = "<group>";
+		};
+		75CA84194C6857388AD329DF /* lprint */ = {
+			isa = PBXGroup;
+			children = (
+				8FDED063852E4221CA029E69,
+				08D7A151859027AAB72A2362,
+				B69D388FDEB06984E92B563F,
+				D9380022E35E4B2C791F4399,
+				8E5DD3BA9FD9F069797EAFB3,
+				B7433DAD1902ACEBEDB37F9C,
+				21DF7AA4A4572A04ECCA5A53,
+				43F3B993DC395C441D5151D2,
+				0B05DD5ED86FDD3F9A2FDADA,
+				B961D0F78FC266AF1ABAAFBA,
+				4D6B8351BBEA29CFAC4C912C,
+				C9E3A80C9083FE2080ED056B,
+				69D03B59AB4CC1281FF04E48,
+				7469877603D0AC66EEE7C561,
+				249980B696DF88D7EC47BF20,
+				7995C1B6458961B32A23D607,
+				D0517551C9B3898263B29507,
+				3DC0CF51D50FD36F92FDC3AE,
+				9EDB81F09452F1FE63D32576,
+				B91F059C18018EBC06EFF463,
+				E86C7632F41B6EF4B509111A,
+				2323E9DAFE6E7D1FD82EC4A2,
+				89BDB51A40A17469C409982A,
+				6D52876B82CE1E014BCF7453,
+				AD815986102DC3789AD8F589,
+				F12E64ED4C62A07A4F3C025D,
+				9C00F02842EEA75FA1C9C8E2,
+				6E218017EBCAD21B47903D9E,
+				B6A83139C49AC912442A6BC7,
+				A33F82F963865BFF1F9C7ED4,
+				A0E4929CA123C622C9F32C04,
+			);
+			name = lprint;
 			sourceTree = "<group>";
 		};
 		7735C1502B2AFE747CB8A515 /* ProperBadger */ = {
 			isa = PBXGroup;
 			children = (
+				75CA84194C6857388AD329DF,
 				CC0AF2A903A66556277022F3,
 				704745EDE952B806127F625D,
 			);
 			name = ProperBadger;
-			sourceTree = "<group>";
-		};
-		7BC169704A329FBB7F71ACEB /* scripts */ = {
-			isa = PBXGroup;
-			children = (
-				612D22C195225E27A5A6362D,
-			);
-			name = scripts;
-			sourceTree = "<group>";
-		};
-		7BC443C3A30AEAD7267B21D9 /* xcschemes */ = {
-			isa = PBXGroup;
-			children = (
-				00A6D1E13FF49755B0D3FC0A,
-			);
-			name = xcschemes;
-			sourceTree = "<group>";
-		};
-		84AF1A0E485A3AD711468013 /* abhishekshivakumar.xcuserdatad */ = {
-			isa = PBXGroup;
-			children = (
-				7B8F7543457833A201C7AE5C,
-			);
-			name = abhishekshivakumar.xcuserdatad;
 			sourceTree = "<group>";
 		};
 		852E4E739C5063A0FB1D6B26 /* JUCE Library Code */ = {
@@ -334,59 +279,27 @@
 			name = "JUCE Library Code";
 			sourceTree = "<group>";
 		};
-		980DDCDE7BEB66769B5A220E /* abhishekshivakumar.xcuserdatad */ = {
+		8FDED063852E4221CA029E69 /* man */ = {
 			isa = PBXGroup;
 			children = (
-				7BC443C3A30AEAD7267B21D9,
+				020374ACC18CD910E5D4F231,
+				44E1C2654841D97654E8185D,
+				EC20F9FD5E4542201AAA9A9D,
+				89886D88A7A236DE053449BA,
+				C09C009A8E58A8E934988AC7,
+				C677BFEABA93B3A03DE3A8AE,
+				BD721143A01A63421B9DB4BC,
+				AD5D3C4F75E2BB3F95DEE72C,
+				ADB6B29210B2DEE6C976C546,
+				4F945F708F4166FD84336451,
+				9F101D522D0DDFB7505B038A,
+				E22DCD8C8FAD26C6B7FEB3F4,
+				7D3D002078EF0985D027290B,
+				F3E49C23C643C349832353C7,
+				88CE5367EE45B6B66BE52365,
+				42E8AFB9966279738BCA2F42,
 			);
-			name = abhishekshivakumar.xcuserdatad;
-			sourceTree = "<group>";
-		};
-		9A45B54E3331B5C1981D7C0A /* lprint */ = {
-			isa = PBXGroup;
-			children = (
-				7442A2917E0F28D944D13B1B,
-				5DC59CE588ADB9DB40D4316C,
-				0030CC0B6435B092F128D9E7,
-				337CAA7A129761382A6D8F0D,
-				C081F3DF0DA81ED987CAF117,
-				CFF72EB3164FD3896A7DA88A,
-				ED9B5D6633292B48DC266392,
-				5CC94CE4FB66DB53098BFDEB,
-				26E3B9EF44B759D3FF115622,
-				B0315D41657824668C755D4A,
-				0EE976AC16890C1BAC2E36FA,
-				167CAB01F0F3B3FAD3AF704D,
-				76AE3AC5F72BC12D717236B8,
-				2B9C103AEE923DD112D72925,
-				858B0C9019D59355947A0818,
-				2EAABFD2AE235A5AD839697D,
-				AA29FB0EAF2425BA87CA016F,
-				CDA602D7B8F10546DE677217,
-				1B200D8CFE0F1FF55D6CB344,
-				EC1D54F87009361C6218D925,
-				A5A12C022C56B156E8038050,
-				DE5FEA741C6B4D39EBCDA2F7,
-				F820400426ABF3B874805CE5,
-				BEDCEA64AEB2D0BED75D450E,
-				3762DFB4ED67CE77CAA13E6B,
-				DD4F3BFED11E37933D387294,
-				CFD1D243DED07B9BBF57D80B,
-				F9228DEEE39E172B63AEF7AB,
-				764FE17DE880D0CEE2DC9765,
-				660019D68E3BB27BF3A899CC,
-				2DC1C3E2601EF90D9908A37C,
-				706AFDC154DB06D6066FE027,
-				B90F3AFAC2864A72C8F673D1,
-				720D44AD0EBB6CBDC91E0500,
-				17DA7C176AD3CEECF3F897F9,
-				B6993C93037461EBE5404B4A,
-				7CECE4B9B46309448AA05513,
-				9B1E3A60E0A5A0863A2F8D39,
-				44940E49A1EACE99E9D98FED,
-				3E121B155626C08A61769605,
-			);
-			name = lprint;
+			name = man;
 			sourceTree = "<group>";
 		};
 		9A65BC8BD31A003F142493BB /* Resources */ = {
@@ -398,22 +311,27 @@
 			name = Resources;
 			sourceTree = "<group>";
 		};
-		BEB8057BA2F2C99988AB5340 /* hooks */ = {
+		B69D388FDEB06984E92B563F /* static-resources */ = {
 			isa = PBXGroup;
 			children = (
-				907D8C1C9F599FB6D3FFBE86,
+				8BB50BD679036E4DE523EC0F,
+				EEE1A499607CA9DCB51A93C1,
+				92D78D188A308564CE272258,
+				EEB354407463AB8415B2A042,
+				23618E5765FCEF8D229B6923,
+				00345B38D53788F341548E03,
+				779B84E8F358883C708BE657,
+				5206D6ECD7469D87A8B177BC,
+				F815EB613E9A819B92DFC517,
+				A66EF2CBE6D492C43E1A7D23,
+				1B1F27E64F707D98E4DA2D77,
+				4C20E1A41D1DB195750C7D8A,
+				7841C4161E74603481E59BAE,
+				92C289ADB795AD7E6FE221D7,
+				078F1F967EFE8C0C52D54C6F,
+				0DCFB39F3B5FD7C32E1D24E5,
 			);
-			name = hooks;
-			sourceTree = "<group>";
-		};
-		C081F3DF0DA81ED987CAF117 /* testsuite */ = {
-			isa = PBXGroup;
-			children = (
-				26937FA057D8FA869E554AE2,
-				70A03A7B0840B3352375DAD9,
-				9DDF0C8474FA90DA3EAEBCA1,
-			);
-			name = testsuite;
+			name = "static-resources";
 			sourceTree = "<group>";
 		};
 		CC0AF2A903A66556277022F3 /* Source */ = {
@@ -426,31 +344,14 @@
 			name = Source;
 			sourceTree = "<group>";
 		};
-		CFF72EB3164FD3896A7DA88A /* xcode */ = {
+		D9380022E35E4B2C791F4399 /* testsuite */ = {
 			isa = PBXGroup;
 			children = (
-				D945A946F2AF7EECC32264AD,
-				C3DACC929987CD97B2D61645,
+				1CA9559BBF2D10C601555832,
+				FA0AFDDAC48C2B31BC90E91C,
+				8006CAEC3DB8EF0C942EBF8E,
 			);
-			name = xcode;
-			sourceTree = "<group>";
-		};
-		D02E7BD45D254F699A340395 /* xcuserdata */ = {
-			isa = PBXGroup;
-			children = (
-				980DDCDE7BEB66769B5A220E,
-			);
-			name = xcuserdata;
-			sourceTree = "<group>";
-		};
-		D945A946F2AF7EECC32264AD /* lprint.xcodeproj */ = {
-			isa = PBXGroup;
-			children = (
-				2909D1E4ABFA12B1CFBFF4D9,
-				D02E7BD45D254F699A340395,
-				8D8D13ED850D73273C54F5FB,
-			);
-			name = lprint.xcodeproj;
+			name = testsuite;
 			sourceTree = "<group>";
 		};
 		EE036E2895DF10A19203154D /* Frameworks */ = {
@@ -462,14 +363,6 @@
 				B1BC40ABDFD5AE10DBE59310,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		FEACCCD97117813593F7CE8D /* xcuserdata */ = {
-			isa = PBXGroup;
-			children = (
-				84AF1A0E485A3AD711468013,
-			);
-			name = xcuserdata;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -557,12 +450,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				08190684A50100FCC293C5C8,
+				A214153DCB69BE1A171DE12A,
+				EACAEF26D653F2D2673506C0,
+				0FB69A8CE231E66958E0E178,
+				24D54E2FBFFA72B3C3A2D890,
 				085022B03B9A72C8060F6B8D,
 				492E1A62BF58F88B52FCDE48,
-				70787AC2E345E83BAC568520,
-				65165E8CBC0EDAD0DE583FD4,
-				691188F4C63AFBA49A487FF3,
-				AB7604BC1DB151EE7751BEB1,
 				4FCD59D4F5B39B3164348DA2,
 				43CF87721AB5802BBB9416BE,
 				E81CDBD29BDCA97DCFA45448,
@@ -786,7 +680,7 @@
 					"$(inherited)",
 					"\"/usr/local/lib\"",
 					"\"/opt/local/libexec/openssl3/lib/\"",
-					"\"/Users/abhishekshivakumar/Downloads/cups-2.3.6/cups\"",
+					"\"/Users/abhishekshivakumar/Downloads/cups-2.3.4/cups\"",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				MTL_HEADER_SEARCH_PATHS = "$(SRCROOT)/../../JuceLibraryCode /Users/abhishekshivakumar/juce-dev/juce-7/JUCE/modules /usr/local/include/";

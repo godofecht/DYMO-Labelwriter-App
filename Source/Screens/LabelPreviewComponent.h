@@ -15,15 +15,15 @@
 
 extern "C"
 {
-#include "lprint/lprint.h"
-#include "lprint/static-resources/lprint-de-strings.h"
-#include "lprint/static-resources/lprint-en-strings.h"
-#include "lprint/static-resources/lprint-es-strings.h"
-#include "lprint/static-resources/lprint-fr-strings.h"
-#include "lprint/static-resources/lprint-it-strings.h"
-#include "lprint/static-resources/lprint-png.h"
-#include "lprint/static-resources/lprint-large-png.h"
-#include "lprint/static-resources/lprint-small-png.h"
+#include "../../lprint/lprint.h"
+#include "../../lprint/static-resources/lprint-de-strings.h"
+#include "../../lprint/static-resources/lprint-en-strings.h"
+#include "../../lprint/static-resources/lprint-es-strings.h"
+#include "../../lprint/static-resources/lprint-fr-strings.h"
+#include "../../lprint/static-resources/lprint-it-strings.h"
+#include "../../lprint/static-resources/lprint-png.h"
+#include "../../lprint/static-resources/lprint-large-png.h"
+#include "../../lprint/static-resources/lprint-small-png.h"
 }
 
 class LabelPreviewComponent : public juce::Component
@@ -119,9 +119,9 @@ public:
 
     constexpr static const pappl_pr_driver_t    lprint_drivers[] =
         {                    // Driver list
-#include "lprint/lprint-dymo.h"
-#include "lprint/lprint-epl2.h"
-#include "lprint/lprint-zpl.h"
+#include "../../lprint/lprint-dymo.h"
+#include "../../lprint/lprint-epl2.h"
+#include "../../lprint/lprint-zpl.h"
         };
 
     juce::String defaultLabelFormat = "oe_lg-address-label_1.4x3.5in";
@@ -144,7 +144,7 @@ public:
 //    {
 //        char* cstring[] = { const_cast<char*> ("lprint"), const_cast<char*> ("add"), const_cast<char*> ("-d"), const_cast<char*> ("DYMO LabelWriter 450-107"), const_cast<char*> ("-m"),
 //            const_cast<char*> ("drivername"), const_cast<char*> ("-v"), const_cast<char*> ("deviceuri") };
-//        papplMainloop ((int) 4, const_cast<char**> (cstring),
+//        papplMainloop ((int) 8, const_cast<char**> (cstring),
 //                      const_cast<char*> (LPRINT_VERSION),
 //                       const_cast<char*> ("Copyright &copy; 2019-2021 by Michael R Sweet. All Rights Reserved."),
 //                      (int)(sizeof(lprint_drivers) / sizeof(lprint_drivers[0])),
