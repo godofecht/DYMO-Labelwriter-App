@@ -4,3 +4,9 @@
 [submodule "pappl"]
 	path = pappl
 	url = git@github.com:michaelrsweet/pappl.git
+[submodule "gnutls"]
+	path = gnutls
+	url = git@github.com:gnutls/gnutls.git
+[submodule "libcups"]
+	path = libcups
+	url = git@github.com:OpenPrinting/libcups.git

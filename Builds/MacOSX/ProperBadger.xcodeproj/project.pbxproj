@@ -569,7 +569,7 @@
 				LLVM_LTO = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				MTL_HEADER_SEARCH_PATHS = "$(SRCROOT)/../../JuceLibraryCode /Users/abhishekshivakumar/juce-dev/juce-7/JUCE/modules";
-				OTHER_LDFLAGS = "-lcups -lpappl.1 -lusb-1.0 -weak_framework Metal -weak_framework MetalKit";
+				OTHER_LDFLAGS = "-lcups3 -lpappl -weak_framework Metal -weak_framework MetalKit";
 				PRODUCT_BUNDLE_IDENTIFIER = com.yourcompany.ProperBadger;
 				PRODUCT_NAME = "ProperBadger";
 				USE_HEADERMAP = NO;
@@ -670,7 +670,9 @@
 				HEADER_SEARCH_PATHS = (
 					"$(SRCROOT)/../../JuceLibraryCode",
 					"/Users/abhishekshivakumar/juce-dev/juce-7/JUCE/modules",
-					"/usr/local/include/",
+					"/usr/local/include/libcups3",
+					"/usr/local/include",
+					"/opt/homebrew/Cellar/openssl@3/3.1.2/include/openssl",
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = Info-App.plist;
@@ -678,13 +680,13 @@
 				INSTALL_PATH = "$(HOME)/Applications";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"/opt/local/lib\"",
 					"\"/usr/local/lib\"",
-					"\"/opt/local/libexec/openssl3/lib/\"",
-					"\"/Users/abhishekshivakumar/Downloads/cups-2.3.4/cups\"",
+					"\"/opt/homebrew/Cellar/openssl@3/3.1.2/lib\"",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
-				MTL_HEADER_SEARCH_PATHS = "$(SRCROOT)/../../JuceLibraryCode /Users/abhishekshivakumar/juce-dev/juce-7/JUCE/modules /usr/local/include/";
-				OTHER_LDFLAGS = "-lcups -lpappl.1 -lusb-1.0 -weak_framework Metal -weak_framework MetalKit";
+				MTL_HEADER_SEARCH_PATHS = "$(SRCROOT)/../../JuceLibraryCode /Users/abhishekshivakumar/juce-dev/juce-7/JUCE/modules /usr/local/include/libcups3 /usr/local/include /opt/homebrew/Cellar/openssl@3/3.1.2/include/openssl";
+				OTHER_LDFLAGS = "-lcups3 -lpappl -weak_framework Metal -weak_framework MetalKit";
 				PRODUCT_BUNDLE_IDENTIFIER = com.yourcompany.ProperBadger;
 				PRODUCT_NAME = "ProperBadger";
 				USE_HEADERMAP = NO;

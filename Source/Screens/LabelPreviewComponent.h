@@ -126,19 +126,33 @@ public:
 
     juce::String defaultLabelFormat = "oe_lg-address-label_1.4x3.5in";
     
-//    void getDrivers()
-//    {
-//        char* cstring[] = { const_cast<char*> ("lprint"), const_cast<char*> ("drivers") };
-//        papplMainloop ((int) 2, const_cast<char**> (cstring),
-//                      const_cast<char*> (LPRINT_VERSION),
-//                       const_cast<char*> ("Copyright &copy; 2019-2021 by Michael R Sweet. All Rights Reserved."),
-//                      (int)(sizeof(lprint_drivers) / sizeof(lprint_drivers[0])),
-//                      NULL, autoadd_cb, driver_cb,
-//                      /*subcmd_name*/NULL, /*subcmd_cb*/NULL,
-//                      system_cb,
-//                      /*usage_cb*/NULL,
-//                      NULL);
-//    }
+    void getDevices()
+    {
+        char* cstring[] = { const_cast<char*> ("lprint"), const_cast<char*> ("devices") };
+        papplMainloop ((int) 2, const_cast<char**> (cstring),
+                      const_cast<char*> (LPRINT_VERSION),
+                       const_cast<char*> ("Copyright &copy; 2019-2021 by Michael R Sweet. All Rights Reserved."),
+                      (int)(sizeof(lprint_drivers) / sizeof(lprint_drivers[0])),
+                      NULL, autoadd_cb, driver_cb,
+                      /*subcmd_name*/NULL, /*subcmd_cb*/NULL,
+                      system_cb,
+                      /*usage_cb*/NULL,
+                      NULL);
+    }
+    
+    void getDrivers()
+    {
+        char* cstring[] = { const_cast<char*> ("lprint"), const_cast<char*> ("drivers") };
+        papplMainloop ((int) 2, const_cast<char**> (cstring),
+                      const_cast<char*> (LPRINT_VERSION),
+                       const_cast<char*> ("Copyright &copy; 2019-2021 by Michael R Sweet. All Rights Reserved."),
+                      (int)(sizeof(lprint_drivers) / sizeof(lprint_drivers[0])),
+                      NULL, autoadd_cb, driver_cb,
+                      /*subcmd_name*/NULL, /*subcmd_cb*/NULL,
+                      system_cb,
+                      /*usage_cb*/NULL,
+                      NULL);
+    }
 //    
 //    void addPrinter()
 //    {
@@ -203,8 +217,54 @@ public:
 
     }
     
+    void setDefaultDeviceToDymo()
+    {
+        int argc = 4; // Assuming there are 4 command-line arguments including the program name
+        juce::String labelMediaArgString = "media=" + defaultLabelFormat;
+        juce::CharPointer_UTF8 labelFormatCharPointer = labelMediaArgString.toUTF8();
+        const char* labelFormatCString = labelFormatCharPointer.getAddress();
+        char* argv[] = { const_cast<char*> ("lprint"), const_cast<char*> ("default"), const_cast<char*> ("-d"), const_cast<char*> ("DYMO_LabelWriter_450") };
+        DBG ("Printing to dimensions: " + defaultLabelFormat);
+
+        papplMainloop ((int) argc, const_cast<char**> (argv),
+                      const_cast<char*> (LPRINT_VERSION),
+                       const_cast<char*> ("Copyright &copy; 2019-2021 by Michael R Sweet. All Rights Reserved."),
+                      (int)(sizeof(lprint_drivers) / sizeof(lprint_drivers[0])),
+                      NULL, autoadd_cb, driver_cb,
+                      /*subcmd_name*/NULL, /*subcmd_cb*/NULL,
+                      system_cb,
+                      /*usage_cb*/NULL,
+                      NULL);
+    }
+    
+    void addDymo()
+    {
+        int argc = 8; // Assuming there are 4 command-line arguments including the program name
+        juce::String labelMediaArgString = "media=" + defaultLabelFormat;
+        juce::CharPointer_UTF8 labelFormatCharPointer = labelMediaArgString.toUTF8();
+        const char* labelFormatCString = labelFormatCharPointer.getAddress();
+        char* argv[] = { const_cast<char*> ("lprint"), const_cast<char*> ("add"), const_cast<char*> ("-d"), const_cast<char*> ("DYMO_LabelWriter_450")
+            ,const_cast<char*> ("-v"), const_cast<char*> ("usb://DYMO/LabelWriter 450?serial=01010112345600"), const_cast<char*> ("-m"), const_cast<char*> ("dymo_lw-450")
+        };
+        DBG ("Printing to dimensions: " + defaultLabelFormat);
+
+        papplMainloop ((int) argc, const_cast<char**> (argv),
+                      const_cast<char*> (LPRINT_VERSION),
+                       const_cast<char*> ("Copyright &copy; 2019-2021 by Michael R Sweet. All Rights Reserved."),
+                      (int)(sizeof(lprint_drivers) / sizeof(lprint_drivers[0])),
+                      NULL, autoadd_cb, driver_cb,
+                      /*subcmd_name*/NULL, /*subcmd_cb*/NULL,
+                      system_cb,
+                      /*usage_cb*/NULL,
+                      NULL);
+    }
+    
     void startPrintOperation (juce::Image imageToPrint, const char* imageToPrintFilePath)
     {
+        getDevices();
+ //       addDymo();
+//        setDefaultDeviceToDymo();
+//        getDrivers();
         //TODO: Save in temp file
         
         // Save the image as a file
@@ -230,22 +290,24 @@ public:
 //        addPrinter();
 //        setPrintOffset();
         
-        int argc = 4; // Assuming there are 4 command-line arguments including the program name
-        juce::String labelMediaArgString = "media=" + defaultLabelFormat;
-        juce::CharPointer_UTF8 labelFormatCharPointer = labelMediaArgString.toUTF8();
-        const char* labelFormatCString = labelFormatCharPointer.getAddress();
-        char* argv[] = { const_cast<char*> ("lprint"), const_cast<char*> ("-o"), const_cast<char*> (labelFormatCString), const_cast<char*> (imageToPrintFilePath) };
-        DBG ("Printing to dimensions: " + defaultLabelFormat);
-
-        papplMainloop ((int) argc, const_cast<char**> (argv),
-                      const_cast<char*> (LPRINT_VERSION),
-                       const_cast<char*> ("Copyright &copy; 2019-2021 by Michael R Sweet. All Rights Reserved."),
-                      (int)(sizeof(lprint_drivers) / sizeof(lprint_drivers[0])),
-                      NULL, autoadd_cb, driver_cb,
-                      /*subcmd_name*/NULL, /*subcmd_cb*/NULL,
-                      system_cb,
-                      /*usage_cb*/NULL,
-                      NULL);
+//        int argc = 4; // Assuming there are 4 command-line arguments including the program name
+//        juce::String labelMediaArgString = "media=" + defaultLabelFormat;
+//        juce::CharPointer_UTF8 labelFormatCharPointer = labelMediaArgString.toUTF8();
+//        const char* labelFormatCString = labelFormatCharPointer.getAddress();
+//        char* argv[] = { const_cast<char*> ("lprint"), const_cast<char*> ("-o"), const_cast<char*> (labelFormatCString), const_cast<char*> (imageToPrintFilePath) };
+//        DBG ("Printing to dimensions: " + defaultLabelFormat);
+//
+//        papplMainloop ((int) argc, const_cast<char**> (argv),
+//                      const_cast<char*> (LPRINT_VERSION),
+//                       const_cast<char*> ("Copyright &copy; 2019-2021 by Michael R Sweet. All Rights Reserved."),
+//                      (int)(sizeof(lprint_drivers) / sizeof(lprint_drivers[0])),
+//                      NULL, autoadd_cb, driver_cb,
+//                      /*subcmd_name*/NULL, /*subcmd_cb*/NULL,
+//                      system_cb,
+//                      /*usage_cb*/NULL,
+//                      NULL);
+        
+        
     }
 
     //
