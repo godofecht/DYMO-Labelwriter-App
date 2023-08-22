@@ -128,7 +128,6 @@ private:
 
     std::vector<std::vector<double>> linePortions;
 
-
     juce::Point<int> mmToPx(juce::Point<int> mm)
     {
         return { static_cast<int>((mm.x / 25.4) * dpi), static_cast<int>((mm.y / 25.4) * dpi) };
@@ -139,8 +138,8 @@ private:
         int size = maxLineHeights[idx];
         auto line = lines[idx];
 
-        int maxElemWidth = res.x / line.length();
         int gapWidth = 4; // TODO: Adjust as needed
+        int maxElemWidth = res.x - gapWidth;
 
         juce::Font font = baseFont.withHeight(static_cast<float>(size));
         std::vector<juce::Rectangle<int>> boxes;
