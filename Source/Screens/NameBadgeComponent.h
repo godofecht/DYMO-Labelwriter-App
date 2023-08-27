@@ -14,23 +14,23 @@
 
 class NameBadgeComponent : public TextAggregatorComponent
 {
-    juce::TextEditor nameEditor;
-    juce::TextEditor commentEditor;
+    LabelledFormField nameField { "Name" };
+    LabelledFormField commentField { "Comments" };
+
 public:
     NameBadgeComponent()
     {
-        addAndMakeVisible (printButton);
-        addAndMakeVisible (nameEditor);
-        addAndMakeVisible (commentEditor);
-
-        nameEditor.onTextChange = [&]() { updateLabelPreview(); };
-        commentEditor.onTextChange = [&]() { updateLabelPreview(); };
+        addAndMakeVisible(nameField);
+        addAndMakeVisible(commentField);
+        
+        nameField.setTextChangeCallback([&]() { updateLabelPreview(); });
+        commentField.setTextChangeCallback([&]() { updateLabelPreview(); });
     }
     
     juce::String getTextAggregate() override
     {
-        juce::String text = nameEditor.getText();
-        juce::String commentText = commentEditor.getText();
+        juce::String text = nameField.getText().quoted();
+        juce::String commentText = commentField.getText();
         
         if (!commentText.isEmpty())
         {
@@ -39,18 +39,14 @@ public:
         return text;
     }
     
-    void paint (juce::Graphics& g) override
-    {
-        
-    }
-    
-    //TODO: When editor is filled in, generate preview
-    
     void resized() override
     {
-        nameEditor.setBounds            (200, 0, getWidth() - 200, 50);
-        commentEditor.setBounds         (200, 50, getWidth() - 200, 50);
-        labelPreviewComponent.setBounds (0, 100, getWidth(), 200);
-        printButton.setBounds           (0, 300, getWidth(), 100);
+        auto area = getLocalBounds();
+        
+        nameField.setBounds(area.removeFromTop(50));
+        commentField.setBounds(area.removeFromTop(50));
+        
+        labelPreviewComponent.setBounds(area.removeFromTop(200));
+        printButton.setBounds(area.removeFromTop(100));
     }
 };

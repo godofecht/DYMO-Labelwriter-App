@@ -14,7 +14,7 @@
 
 class GeneralLabelComponent : public TextAggregatorComponent
 {
-    juce::TextEditor largeEditor;
+    FormField largeEditor;
     
 public:
     

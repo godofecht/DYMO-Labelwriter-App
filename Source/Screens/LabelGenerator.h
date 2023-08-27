@@ -36,6 +36,11 @@ public:
             height = max_y - min_y;
         }
     };
+    
+    LabelGenerator() : dpi (300), res (mmToPx ({87, 35}))
+    {
+        
+    }
 
     LabelGenerator (const juce::StringArray& lines, int dpi = 300, juce::Point<int> size_mm = {87, 35}) //560, 200 are our labelPreview dimensions
         : dpi(dpi), res(mmToPx(size_mm))
@@ -67,6 +72,18 @@ public:
             { 0.7, 0.2 },
             { 0.5, 0.2, 0.2 }
         };
+        
+        
+    }
+    
+    std::vector<juce::Colour> linePortionColours = {juce::Colours::red, juce::Colours::green, juce::Colours::blue};
+    
+    juce::Image clearImage()
+    {
+        juce::Image img (juce::Image::RGB, res.x, res.y, true);
+        juce::Graphics g (img);
+        g.drawRect (0, 0, res.x, res.y, 15);
+        return img;
     }
 
     juce::Image generateImage()
@@ -94,23 +111,48 @@ public:
         
         int lineGap = spareHeight / lines.size();
 
-        int lineTop = lineGap / 2;
+        int lineTop = 0;
         
         int lineCount = 0;
+        int numLines = lineParams.size() - 1;
+        if (numLines > 2) numLines = 2;
+        if (numLines < 0) numLines = 0;
+        
+        DBG ("Number of lines: " + juce::String (numLines));
+        
+        auto linePortion = linePortions[numLines];
         for (const auto& lp : lineParams)
         {
+            float proportion = linePortion[lineCount];
+            
             int colWidth = res.x / lp.line.size();
             int x = 0;
+            
+            float lineHeight = linePortion[lineCount] * res.y;
+            
+            DBG ("Drawing line: " + juce::String (lineCount) + " at a proportion of: " + juce::String (proportion));
 
             for (const auto& elem : lp.line)
             {
                 g.setFont (lp.font);
-                g.drawText (elem, x, lineTop, colWidth, lp.height, juce::Justification::centredTop);
+
+                
+                juce::String myString = "Hello, JUCE!";
+                
+      //          g.setFont (res.y * proportion);
+                
+          //      g.drawText (elem, x, lineTop, colWidth, lineHeight, juce::Justification::centred);
+                auto textBounds = juce::Rectangle<int> (x, lineTop, colWidth, lineHeight);
+                g.setColour (linePortionColours[lineCount]);
+                g.fillRect (textBounds);
+                g.setColour (juce::Colours::black);
+                drawTextToFit (g, elem, textBounds);
+
                 
                 x += colWidth;
             }
 
-            lineTop += lp.height + lineGap;
+                 lineTop += res.y * proportion;
             DBG ("Generated line: " + juce::String (lineCount));
             lineCount++;
         }
@@ -118,6 +160,34 @@ public:
 
         return img;
     }
+    
+    void drawTextToFit(juce::Graphics& g, const juce::String& text, juce::Rectangle<int> bounds, juce::Justification justification = juce::Justification::centred)
+    {
+        juce::Font font = g.getCurrentFont();
+        float fontSize = font.getHeight();
+        float textWidth = font.getStringWidth(text);
+        float maxWidth = static_cast<float>(bounds.getWidth());
+
+        // Reduce font size until text fits within the width.
+        while (textWidth > maxWidth && fontSize > 0)
+        {
+            fontSize -= 1.0f;
+            font.setHeight(fontSize);
+            textWidth = font.getStringWidth(text);
+        }
+
+        // Ensure text fits vertically within the bounds.
+        if (fontSize > bounds.getHeight())
+        {
+            fontSize = static_cast<float>(bounds.getHeight());
+        }
+
+        font.setHeight(fontSize);
+        g.setFont(font);
+
+        g.drawText(text, bounds, justification, true);
+    }
+
 
 private:
     int dpi;

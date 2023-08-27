@@ -70,18 +70,62 @@ public:
     
     void setLines (juce::String linesToSet)
     {
-        juce::StringArray lines = juce::StringArray::fromTokens (linesToSet, "\n", "");
+        DBG ("Untokenized string is: " + linesToSet);
         
-        DBG ("========");
+        if (linesToSet.isEmpty() || linesToSet == "\"\"")
+        {
+            LabelGenerator labelGenerator;
+            setPreviewSnapshot(labelGenerator.clearImage());
+            repaint();
+            return;
+        }
+        
+        juce::StringArray lines;
+        
+        int startPos = 0;
+        while (startPos < linesToSet.length())
+        {
+            if (linesToSet[startPos] == '\"') // Found a starting quote
+            {
+                int endPos = linesToSet.indexOfChar(startPos + 1, '\"');
+                if (endPos != -1)
+                {
+                    lines.add(linesToSet.substring(startPos + 1, endPos));
+                    startPos = endPos + 1;
+                }
+                else // Just in case the quote isn't closed, add the remainder and break
+                {
+                    lines.add(linesToSet.substring(startPos));
+                    break;
+                }
+            }
+            else
+            {
+                int spacePos = linesToSet.indexOfChar(startPos, '?');
+                if (spacePos != -1)
+                {
+                    lines.add(linesToSet.substring(startPos, spacePos).trim());
+                    startPos = spacePos + 1;
+                }
+                else
+                {
+                    lines.add(linesToSet.substring(startPos).trim());
+                    break;
+                }
+            }
+        }
+
+        DBG("========");
         for (auto& line : lines)
-            DBG (line); DBG ("\n");
-        DBG ("====END=");
-        
+            DBG(line);
+        DBG("====END=");
+
         //TODO: Make global
-        LabelGenerator labelGenerator (lines, dpi);
-        setPreviewSnapshot (labelGenerator.generateImage());
+        LabelGenerator labelGenerator(lines, dpi);
+        setPreviewSnapshot(labelGenerator.generateImage());
         repaint();
     }
+
     
     void setPreviewSnapshot (juce::Image newImage) { previewSnapshot = newImage; }
     
@@ -124,7 +168,7 @@ public:
 #include "../../lprint/lprint-zpl.h"
         };
 
-    juce::String defaultLabelFormat = "oe_lg-address-label_1.4x3.5in";
+    juce::String defaultLabelFormat = "oe_address-label_1.125x3.5in";
     
     void getDevices()
     {

@@ -16,84 +16,70 @@ class StorageLabelComponent : public TextAggregatorComponent
 {
     juce::TextButton printButton {"print"};
     
-    juce::TextEditor nameEditor;
-    juce::TextEditor contactEditor;
-    juce::TextEditor useByEditor;
+    LabelledFormField nameField { "Name" };
+    LabelledFormField contactField { "Contact" };
+    LabelledFormField useByField { "Use By" };
     
-    juce::TextButton oneMonthButton;
-    juce::TextButton threeMonthsButton;
+    juce::TextButton oneMonthButton {"1 Month"};
+    juce::TextButton threeMonthsButton {"3 Months"};
     
 public:
     StorageLabelComponent()
     {
-        addAndMakeVisible (printButton);
-        addAndMakeVisible (nameEditor);
-        addAndMakeVisible (contactEditor);
-        addAndMakeVisible (useByEditor);
-        addAndMakeVisible (oneMonthButton);
-        addAndMakeVisible (threeMonthsButton);
-        addAndMakeVisible (labelPreviewComponent);
+        addAndMakeVisible(printButton);
+        addAndMakeVisible(nameField);
+        addAndMakeVisible(contactField);
+        addAndMakeVisible(useByField);
+        addAndMakeVisible(oneMonthButton);
+        addAndMakeVisible(threeMonthsButton);
         
         oneMonthButton.onClick = [&]
         {
-            juce::String useByText = getDateAfterNumMonthsAsString (1);
-            useByEditor.setText (useByText);
+            useByField.setText (getDateAfterNumMonthsAsString(1));
             updateLabelPreview();
         };
         
         threeMonthsButton.onClick = [&]
         {
-            juce::String useByText = getDateAfterNumMonthsAsString (3);
-            useByEditor.setText (useByText);
+            useByField.setText(getDateAfterNumMonthsAsString(3));
             updateLabelPreview();
         };
         
-        nameEditor.onTextChange = [&]() {updateLabelPreview();};
-        contactEditor.onTextChange = [&]() {updateLabelPreview();};
-        useByEditor.onTextChange = [&]() {updateLabelPreview();};
-        
+        nameField.setTextChangeCallback([&]() { updateLabelPreview(); });
+        contactField.setTextChangeCallback([&]() { updateLabelPreview(); });
+        useByField.setTextChangeCallback([&]() { updateLabelPreview(); });
     }
-    
-    juce::String getDateAfterNumMonthsAsString (int numMonths)
-    {
-        // Get the current date and time
-        juce::Time currentTime = juce::Time::getCurrentTime();
 
-        // Calculate the new month and year
+    juce::String getDateAfterNumMonthsAsString(int numMonths)
+    {
+        juce::Time currentTime = juce::Time::getCurrentTime();
         int newMonth = (currentTime.getMonth() + numMonths) % 12;
         int newYear = currentTime.getYear() + (currentTime.getMonth() + numMonths) / 12;
-
-        // Handle the case where adding months results in December of the previous year
         if (newMonth == 0)
         {
             newMonth = 12;
             newYear -= 1;
         }
-
-        // Create a new Time object with the adjusted month and year
-        juce::Time newTime(newYear, newMonth, currentTime.getDayOfMonth(),
-                           currentTime.getHours(), currentTime.getMinutes(),
-                           currentTime.getSeconds(), currentTime.getMilliseconds());
-
-        // Convert the Time object to a string and return
-        return newTime.toString(true, false, false, true); // Returns date in the format "YYYY-MM-DD"
+        juce::Time newTime(newYear, newMonth, currentTime.getDayOfMonth(), currentTime.getHours(), currentTime.getMinutes(), currentTime.getSeconds(), currentTime.getMilliseconds());
+        return newTime.toString(true, false, false, true);
     }
     
     juce::String getTextAggregate() override
     {
-        juce::String text = nameEditor.getText() + " " + contactEditor.getText() + " " + useByEditor.getText();
-        return text;
+        return nameField.getText().quoted() + " " + contactField.getText() + " " + useByField.getText();
     }
-    
-    //TODO: When editor is filled in, generate preview
     
     void resized() override
     {
-        nameEditor.setBounds            (200, 0, getWidth() - 200, 50);
-        contactEditor.setBounds         (200, 50, getWidth() - 200, 50);
-        useByEditor.setBounds         (200, 100, getWidth() - 200, 50);
+        auto area = getLocalBounds();
         
-        labelPreviewComponent.setBounds (0, 150, getWidth(), 200);
-        printButton.setBounds           (0, 350, getWidth(), 100);
+        nameField.setBounds(area.removeFromTop(50));
+        contactField.setBounds(area.removeFromTop(50));
+        useByField.setBounds(area.removeFromTop(50));
+        oneMonthButton.setBounds(area.removeFromTop(50));
+        threeMonthsButton.setBounds(area.removeFromTop(50));
+        
+        labelPreviewComponent.setBounds(area.removeFromTop(200));
+        printButton.setBounds(area.removeFromTop(100));
     }
 };

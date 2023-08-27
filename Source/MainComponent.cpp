@@ -5,6 +5,8 @@ MainComponent::MainComponent()
 {
     addAndMakeVisible (labelMakerTabManager);
     setSize (500, 600);
+    
+    setLookAndFeel (&oldProgramLookAndFeel);
 }
 
 MainComponent::~MainComponent()
